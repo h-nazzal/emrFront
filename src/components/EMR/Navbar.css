@@ -1,0 +1,19 @@
+.appBar{
+    background-color: #648695;
+    padding: 0.4em  ;
+}
+.login-logout-btn{
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+.login-logout-btn :hover{
+    background-color: #648695;
+    border: 1px solid #fff;
+
+}
+.bg-button{
+    background-color: yellow;
+}
+.dashboard-container{
+    padding-bottom:2em ;
+}

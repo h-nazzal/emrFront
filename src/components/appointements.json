@@ -1,0 +1,227 @@
+{
+  "ForPatient": {
+    "state": {
+      "date": "",
+      "startTime": "",
+      "endTime": "",
+      "patientName": "",
+      "reason": "",
+      "duration": "",
+      "check": "",
+      "id": ""
+    },
+
+    "columnsTable": {
+      "endDate": {
+        "name": "End Time",
+        "selector": "endDate",
+        "sortable": true,
+        "center": true
+      },
+      "startDate": {
+        "name": "Start Time",
+        "selector": "startDate",
+        "sortable": true,
+        "center": true
+      },
+      "date": {
+        "name": "Date",
+        "selector": "date",
+        "sortable": true,
+        "center": true
+      },
+      "reason": {
+        "name": "Reason",
+        "selector": "reason",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "500px"
+      }
+    },
+    "modalAdditionForms": {
+      "patientName": {
+        "type": "text",
+        "name": "patientName"
+      },
+      "date": {
+        "type": "date",
+        "name": "date"
+      },
+
+      "startTime": {
+        "type": "time",
+        "name": "startTime"
+      },
+      "reason": {
+        "type": "text",
+        "name": "reason"
+      },
+      "duration": {
+        "type": "number",
+        "name": "duration"
+      }
+    },
+    "modalUpdateForms": {
+      "date": {
+        "type": "date",
+        "name": "date"
+      },
+
+      "startDate": {
+        "type": "time",
+        "name": "startDate"
+      },
+      "endDate": {
+        "type": "time",
+        "name": "endDate"
+      },
+      "reason": {
+        "type": "text",
+        "name": "reason"
+      }
+    },
+    "updatedDetails": {
+      "id": "",
+      "reason": "",
+      "startDate": "",
+      "endDate": ""
+    },
+    "addDetails": {
+      "patientName": "",
+      "reason": "",
+      "startTime": "",
+      "duration": "",
+      "date": "",
+      "check": "",
+      "id": ""
+    },
+    "title": "All Patient Appointements",
+    "description": "Here you will see all patient appointements..",
+    "addAppointement": "http://localhost:8080/appointment/addAppoinment",
+    "getAllAppointements": "http://localhost:8080/appointment/getAppoinmentbyPtid",
+    "updateAppointements": "http://localhost:8080/appointment/updateAppointment",
+    "deleteAppointements": "http://localhost:8080/appointment/deleteAppointment"
+  },
+  "ForDoctor": {
+    "state": {
+      "date": "",
+      "startTime": "",
+      "endTime": "",
+      "patientName": "",
+      "reason": "",
+      "duration": "",
+      "check": "",
+      "id": ""
+    },
+    "getDataObject": {
+      "date": "",
+      "check": "",
+      "id": ""
+    },
+
+    "columnsTable": {
+      "patientName": {
+        "name": "Patient Name ",
+        "selector": "patientName",
+        "sortable": true,
+        "center": true
+      },
+      "endDate": {
+        "name": "End Time",
+        "selector": "endDate",
+        "sortable": true,
+        "center": true
+      },
+      "startDate": {
+        "name": "Start Time",
+        "selector": "startDate",
+        "sortable": true,
+        "center": true
+      },
+      "date": {
+        "name": "Date",
+        "selector": "date",
+        "sortable": true,
+        "center": true
+      },
+      "reason": {
+        "name": "Reason",
+        "selector": "reason",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "500px"
+      }
+    },
+    "modalAdditionForms": {
+      "patientCode": {
+        "type": "text",
+        "name": "patientCode"
+      },
+      "date": {
+        "type": "date",
+        "name": "date"
+      },
+
+      "startTime": {
+        "type": "time",
+        "name": "startTime"
+      },
+      "duration": {
+        "type": "number",
+        "name": "duration"
+      }
+    },
+    "modalUpdateForms": {
+      "date": {
+        "type": "date",
+        "name": "date"
+      },
+
+      "startDate": {
+        "type": "time",
+        "name": "startDate"
+      },
+      "endDate": {
+        "type": "time",
+        "name": "endDate"
+      },
+      "reason": {
+        "type": "text",
+        "name": "reason"
+      }
+    },
+    "updatedDetails": {
+      "id": "",
+      "reason": "",
+      "startDate": "",
+      "endDate": ""
+    },
+    "addDetails": {
+      "patientCode": "",
+      "startTime": "",
+      "duration": "",
+      "date": "",
+      "check": "",
+      "id": ""
+    },
+    "title": "All Doctor Appointements at Specific time",
+    "description": "Here you will see all your Appointements...",
+    "addAppointement": "http://localhost:8080/appointment/addAppoinment",
+    "updateAppointements": "http://localhost:8080/appointment/updateAppointment",
+    "deleteAppointements": "http://localhost:8080/appointment/deleteAppointment",
+    "getAllappointementsForDoctor": "http://localhost:8080/appointment/getAppoinmentbyDrId",
+    "getAllappointements": "http://localhost:8080/appointment/getAppointment"
+  }
+}

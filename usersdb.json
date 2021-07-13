@@ -1,0 +1,73 @@
+{
+  "allergy": [
+    {
+      "id": 6,
+      "name": "alaaElmenshawy",
+      "description": "uuuuuhnnnnnnnn"
+    },
+    {
+      "name": "alaaElmenshawy",
+      "description": "kjlkjlkjlkj",
+      "id": 9
+    },
+    {
+      "name": "aaddcccc",
+      "description": "sssss",
+      "id": 10
+    }
+  ],
+  "appointements": [
+    {
+      "id": "1",
+      "patientName": "ccccccc",
+      "reason": "aaaaaaaaaaaaaaaaaa",
+      "date": "25-10-2020",
+      "time": "02:30",
+      "duration": "20"
+    },
+    {
+      "id": "2",
+      "patientName": "Mohamed",
+      "reason": "lkjdlkjldjlfdflkdlfjdkljfldkjf",
+      "date": "25-10-2020",
+      "time": "02:30",
+      "FD": "Giza Hospital",
+      "duration": "20"
+    },
+    {
+      "id": "3",
+      "patientName": "ahmed",
+      "reason": "lkjdlkjldjlfdflkdlfjdkljfldkjf",
+      "date": "25-10-2020",
+      "time": "02:30",
+      "FD": "Giza Hospital",
+      "duration": "20"
+    },
+    {
+      "id": "4",
+      "patientName": "alaa",
+      "reason": "lkjdlkjldjlfdflkdlfjdkljfldkjf",
+      "date": "25-10-2020",
+      "time": "02:30",
+      "FD": "Giza Hospital",
+      "duration": "20"
+    },
+    {
+      "patientName": "alaa",
+      "reason": "akjdkjlkdjfkldf",
+      "date": "2021-04-13",
+      "time": "17:27",
+      "duration": "20",
+      "id": "H_s1tRe"
+    },
+    {
+      "patientName": "ccccccc",
+      "reason": "aaaaaaaaaaaaaaaaaa",
+      "date": "2021-04-15",
+      "time": "15:04",
+      "duration": "20",
+      "FD": "Giza Hospital",
+      "id": "oTIRCzH"
+    }
+  ]
+}

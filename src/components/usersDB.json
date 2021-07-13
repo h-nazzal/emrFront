@@ -1,0 +1,1309 @@
+{
+  "user": {
+    "state": {
+      "userName": "",
+      "Password": "",
+      "Email": ""
+    },
+    "columnsTable": {
+      "userName": {
+        "name": "User Name",
+        "selector": "userName",
+        "sortable": true,
+        "center": true
+      },
+      "Email": {
+        "name": "Email",
+        "selector": "Email",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "modalUpdateForms": {
+      "userName": {
+        "type": "text",
+        "name": "userName"
+      },
+      "Email": {
+        "type": "text",
+        "name": "Email"
+      }
+    },
+    "modalAdditionForms": {
+      "Email": {
+        "type": "email",
+        "name": "Email"
+      },
+      "userName": {
+        "type": "text",
+        "name": "userName"
+      },
+      "Password": {
+        "type": "password",
+        "name": "Password"
+      }
+    },
+    "title": "All users",
+    "description": "simple blah blah this the page and what it dose you know stuff..",
+    "addUser": "http://localhost:8080/autho/register",
+    "deleteUser": "http://localhost:3000/doctor/deleteDoctor",
+    "updateUser": "http://localhost:3000/doctor/updateDoctor",
+    "getAll": "http://localhost:8080/doctor/getAll"
+  },
+  "doctor": {
+    "state": {
+      "firstName": "",
+      "secondName": "",
+      "lastName": "",
+      "userName": "",
+      "password": "",
+      "Email": "",
+      "phone": "",
+      "specialty": "",
+      "drFDId": ""
+    },
+    "columnsTable": {
+      "firstName": {
+        "name": "First Name",
+        "selector": "firstName",
+        "sortable": true,
+        "center": true
+      },
+      "lastName": {
+        "name": "Last Name",
+        "selector": "lastName",
+        "sortable": true,
+        "center": true
+      },
+      "phone": {
+        "name": "Phone",
+        "selector": "phone",
+        "sortable": true,
+        "center": true,
+        "hide": true
+      },
+      "specialty": {
+        "name": "Specialty",
+        "selector": "specialty",
+        "sortable": true,
+        "center": true,
+        "hide": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "modalUpdateForms": {
+      "firstName": {
+        "type": "text",
+        "name": "firstName",
+        "label": "First Name"
+      },
+      "secondName": {
+        "type": "text",
+        "name": "secondName",
+        "label": "Second Name"
+      },
+      "lastName": {
+        "type": "text",
+        "name": "lastName",
+        "label": "Last Name"
+      },
+      "specialty": {
+        "type": "autoComplete",
+        "name": "specialty",
+        "options": [
+          { "value": "request", "text": "Request" },
+          { "value": "deliver", "text": "Delivering" },
+          { "value": "pending", "text": "Pending" }
+        ],
+        "label": "Speciality",
+        "placeHolder": "Choose your Speciality"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone",
+        "label": "Phone"
+      },
+
+      "drFDId": {
+        "type": "autoComplete",
+        "name": "drFDId",
+        "label": "Place"
+      }
+    },
+    "modalAdditionForms": {
+      "firstName": {
+        "type": "text",
+        "name": "firstName",
+        "label": "First Name",
+        "placeHolder": "Enter Your FirstName"
+      },
+      "secondName": {
+        "type": "text",
+        "name": "secondName",
+        "label": "Second Name",
+        "placeHolder": "Enter Your Second Name"
+      },
+      "lastName": {
+        "type": "text",
+        "name": "lastName",
+        "label": "Last Name",
+        "placeHolder": "Enter Your Last Name"
+      },
+      "specialty": {
+        "type": "autoComplete",
+        "name": "specialty",
+        "options": [
+          { "value": "request", "text": "Request" },
+          { "value": "deliver", "text": "Delivering" },
+          { "value": "pending", "text": "Pending" }
+        ],
+        "label": "Speciality",
+        "placeHolder": "Enter Your Sperciality"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone",
+        "label": "Phone",
+        "placeHolder": "Enter Your Phone"
+      },
+      "Email": {
+        "type": "email",
+        "name": "Email",
+        "label": "Email",
+        "placeHolder": "Enter Your Email"
+      },
+      "userName": {
+        "type": "text",
+        "name": "userName",
+        "label": "User Name",
+        "placeHolder": "Enter Your UserName"
+      },
+      "password": {
+        "type": "password",
+        "name": "password",
+        "label": "Password",
+        "placeHolder": "Enter Your Password"
+      },
+      "drFDId": {
+        "type": "autoComplete",
+        "name": "drFDId",
+        "label": "Place",
+        "placeHolder": "Enter Your FrontDisk"
+      }
+    },
+    "title": "All Doctors",
+    "description": "You will see all Doctor Here..",
+    "addUser": "http://localhost:8080/doctor/addDoctor",
+    "deleteUser": "http://localhost:8080/doctor/deleteDoctor",
+    "updateUser": "http://localhost:8080/doctor/updateDoctor",
+    "getAll": "http://localhost:8080/doctor/getDoctor",
+    "getAllDataFD": "http://localhost:8080/frontdisk/getDoctorFD"
+  },
+  "nurse": {
+    "state": {
+      "firstName": "",
+      "secondName": "",
+      "lastName": "",
+      "userName": "",
+      "password": "",
+      "Email": "",
+      "phone": "",
+      "drId": ""
+    },
+    "columnsTable": {
+      "firstName": {
+        "name": "First Name",
+        "selector": "firstName",
+        "sortable": true,
+        "center": true
+      },
+      "secondName": {
+        "name": "Second Name",
+        "selector": "secondName",
+        "sortable": true,
+        "center": true
+      },
+      "lastName": {
+        "name": "Last Name",
+        "selector": "lastName",
+        "sortable": true,
+        "center": true
+      },
+      "phone": {
+        "name": "Phone",
+        "selector": "phone",
+        "sortable": true,
+        "center": true,
+        "hide": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "modalUpdateForms": {
+      "firstName": {
+        "type": "text",
+        "name": "firstName",
+        "label": "First Name"
+      },
+      "secondName": {
+        "type": "text",
+        "name": "secondName",
+        "label": "Second Name"
+      },
+      "lastName": {
+        "type": "text",
+        "name": "lastName",
+        "label": "Last Name"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone",
+        "label": "Phone"
+      },
+
+      "drId": {
+        "type": "autoComplete",
+        "name": "drId",
+        "label": "Place"
+      }
+    },
+    "modalAdditionForms": {
+      "firstName": {
+        "type": "text",
+        "name": "firstName",
+        "label": "First Name",
+        "placeHolder": "Enter Your First Name"
+      },
+      "secondName": {
+        "type": "text",
+        "name": "secondName",
+        "label": "Second Name",
+        "placeHolder": "Enter Your Second Name"
+      },
+      "lastName": {
+        "type": "text",
+        "name": "lastName",
+        "label": "Last Name",
+        "placeHolder": "Enter Your Last Name"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone",
+        "label": "Phone",
+        "placeHolder": "Enter Your Phone"
+      },
+      "Email": {
+        "type": "email",
+        "name": "Email",
+        "placeHolder": "Enter Your Email"
+      },
+      "userName": {
+        "type": "text",
+        "name": "userName",
+        "label": "User Name",
+        "placeHolder": "Enter Your UserName Name"
+      },
+      "password": {
+        "type": "password",
+        "name": "password",
+        "label": "Password",
+        "placeHolder": "Enter Your Password"
+      },
+      "drId": {
+        "type": "autoComplete",
+        "name": "drId",
+        "label": "Place",
+        "placeHolder": "Enter Your Place"
+      }
+    },
+    "title": "All Nurses",
+    "description": "You can see All Nurses here..",
+    "addUser": "http://localhost:8080/nurse/addNurse",
+    "deleteUser": "http://localhost:8080/nurse/deleteNurse",
+    "updateUser": "http://localhost:8080/nurse/updateNurse",
+    "getAll": "http://localhost:8080/nurse/getNurse",
+    "getAllDataFD": "http://localhost:8080/doctor/getDoctor"
+  },
+  "pathologist": {
+    "state": {
+      "firstName": "",
+      "secondName": "",
+      "lastName": "",
+      "userName": "",
+      "password": "",
+      "Email": "",
+      "phone": "",
+      "pathoFDId": ""
+    },
+    "columnsTable": {
+      "firstName": {
+        "name": "First Name",
+        "selector": "firstName",
+        "sortable": true,
+        "center": true
+      },
+      "secondName": {
+        "name": "Second Name",
+        "selector": "secondName",
+        "sortable": true,
+        "center": true
+      },
+      "lastName": {
+        "name": "Last Name",
+        "selector": "lastName",
+        "sortable": true,
+        "center": true
+      },
+
+      "phone": {
+        "name": "Phone",
+        "selector": "phone",
+        "sortable": true,
+        "center": true,
+        "hide": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "modalUpdateForms": {
+      "firstName": {
+        "type": "text",
+        "name": "firstName"
+      },
+      "secondName": {
+        "type": "text",
+        "name": "secondName"
+      },
+      "lastName": {
+        "type": "text",
+        "name": "lastName"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone"
+      }
+    },
+    "modalAdditionForms": {
+      "firstName": {
+        "type": "text",
+        "name": "firstName",
+        "label": "first Name"
+      },
+      "secondName": {
+        "type": "text",
+        "name": "secondName",
+        "label": "Second Name"
+      },
+      "lastName": {
+        "type": "text",
+        "name": "lastName",
+        "label": "Last Name"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone",
+        "label": "Phone"
+      },
+      "Email": {
+        "type": "email",
+        "name": "Email",
+        "label": "Email"
+      },
+      "userName": {
+        "type": "text",
+        "name": "userName",
+        "label": "User Name"
+      },
+      "password": {
+        "type": "password",
+        "name": "password",
+        "label": "Password"
+      },
+      "pathoFDId": {
+        "type": "autoComplete",
+        "name": "pathoFDId",
+        "label": "Place"
+      }
+    },
+    "title": "All Pathologists",
+    "description": "You can see All Pathologists here...",
+    "addUser": "http://localhost:8080/patho/addPathology",
+    "deleteUser": "http://localhost:8080/patho/deletePathology",
+    "updateUser": "http://localhost:8080/patho/updatePathology",
+    "getAll": "http://localhost:8080/patho/getPathology",
+    "getAllDataFD": "http://localhost:8080/frontdisk/getpathoFD"
+  },
+  "radiogist": {
+    "state": {
+      "firstName": "",
+      "secondName": "",
+      "lastName": "",
+      "userName": "",
+      "password": "",
+      "Email": "",
+      "phone": "",
+      "address": "",
+      "radioFDId": ""
+    },
+    "columnsTable": {
+      "firstName": {
+        "name": "First Name",
+        "selector": "firstName",
+        "sortable": true,
+        "center": true
+      },
+      "secondName": {
+        "name": "Second Name",
+        "selector": "secondName",
+        "sortable": true,
+        "center": true
+      },
+      "lastName": {
+        "name": "Last Name",
+        "selector": "lastName",
+        "sortable": true,
+        "center": true
+      },
+      "phone": {
+        "name": "Phone",
+        "selector": "phone",
+        "sortable": true,
+        "center": true,
+        "hide": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "modalUpdateForms": {
+      "firstName": {
+        "type": "text",
+        "name": "firstName",
+        "label": "First Name"
+      },
+      "secondName": {
+        "type": "text",
+        "name": "secondName",
+        "label": "Second Name"
+      },
+      "lastName": {
+        "type": "text",
+        "name": "lastName",
+        "label": "Last Name"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone",
+        "label": "Phone"
+      },
+      "radioFDId": {
+        "type": "autoComplete",
+        "name": "radioFDId",
+        "label": "Place"
+      }
+    },
+    "modalAdditionForms": {
+      "firstName": {
+        "type": "text",
+        "name": "firstName",
+        "label": "First Name"
+      },
+      "secondName": {
+        "type": "text",
+        "name": "secondName",
+        "label": "Second Name"
+      },
+      "lastName": {
+        "type": "text",
+        "name": "lastName",
+        "label": "Last Name"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone",
+        "label": "Phone"
+      },
+      "Email": {
+        "type": "email",
+        "name": "Email",
+        "label": "Email"
+      },
+      "userName": {
+        "type": "text",
+        "name": "userName",
+        "label": "User Name"
+      },
+      "password": {
+        "type": "password",
+        "name": "password",
+        "label": "Password"
+      },
+      "radioFDId": {
+        "type": "autoComplete",
+        "name": "radioFDId",
+        "label": "Place"
+      }
+    },
+    "title": "All radiogists",
+    "description": "You can see all Radiogists here..",
+    "addUser": "http://localhost:8080/radiology/addRadiology",
+    "deleteUser": "http://localhost:8080/radiology/deleteradiology",
+    "updateUser": "http://localhost:8080/radiology/updateradiology",
+    "getAll": "http://localhost:8080/radiology/getRadiology",
+    "getAllDataFD": "http://localhost:8080/frontdisk/getradioFD"
+  },
+  "chemist": {
+    "state": {
+      "firstName": "",
+      "secondName": "",
+      "lastName": "",
+      "userName": "",
+      "password": "",
+      "Email": "",
+      "phone": "",
+      "labFDId": ""
+    },
+    "columnsTable": {
+      "firstName": {
+        "name": "First Name",
+        "selector": "firstName",
+        "sortable": true,
+        "center": true
+      },
+      "secondName": {
+        "name": "second Name",
+        "selector": "secondName",
+        "sortable": true,
+        "center": true
+      },
+      "lastName": {
+        "name": "Last Name",
+        "selector": "lastName",
+        "sortable": true,
+        "center": true
+      },
+      "phone": {
+        "name": "Phone",
+        "selector": "phone",
+        "sortable": true,
+        "center": true,
+        "hide": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "modalUpdateForms": {
+      "firstName": {
+        "type": "text",
+        "name": "firstName"
+      },
+      "secondName": {
+        "type": "text",
+        "name": "secondName"
+      },
+      "lastName": {
+        "type": "text",
+        "name": "lastName"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone"
+      }
+    },
+    "modalAdditionForms": {
+      "firstName": {
+        "type": "text",
+        "name": "firstName",
+        "label": "First Name"
+      },
+      "secondName": {
+        "type": "text",
+        "name": "secondName",
+        "label": "Second Name"
+      },
+      "lastName": {
+        "type": "text",
+        "name": "lastName",
+        "label": "Last Name"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone"
+      },
+      "Email": {
+        "type": "email",
+        "name": "Email",
+        "label": "Email"
+      },
+      "userName": {
+        "type": "text",
+        "name": "userName",
+        "label": "User Name"
+      },
+      "password": {
+        "type": "password",
+        "name": "password",
+        "label": "Password"
+      },
+      "labFDId": {
+        "type": "autoComplete",
+        "name": "labFDId",
+        "label": "Place"
+      }
+    },
+    "title": "All Chemists",
+    "description": "You can see all Chemists here...",
+    "addUser": "http://localhost:8080/chemist/addChemist",
+    "deleteUser": "http://localhost:8080/chemist/deleteChemist",
+    "updateUser": "http://localhost:8080/chemist/updateChemist",
+    "getAll": "http://localhost:8080/chemist/getChemist",
+    "getAllDataFD": "http://localhost:8080/frontdisk/getlabFD"
+  },
+  "assistant": {
+    "state": {
+      "firstName": "",
+      "secondName": "",
+      "lastName": "",
+      "userName": "",
+      "password": "",
+      "Email": "",
+      "phone": "",
+      "address": ""
+    },
+    "columnsTable": {
+      "firstName": {
+        "name": "First Name",
+        "selector": "firstName",
+        "sortable": true,
+        "center": true
+      },
+      "secondName": {
+        "name": "Second Name",
+        "selector": "secondName",
+        "sortable": true,
+        "center": true
+      },
+      "lastName": {
+        "name": "Last Name",
+        "selector": "lastName",
+        "sortable": true,
+        "center": true
+      },
+      "phone": {
+        "name": "Phone",
+        "selector": "phone",
+        "sortable": true,
+        "center": true,
+        "hide": true
+      },
+      "address": {
+        "type": "text",
+        "name": "address",
+        "label": "Address"
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "modalUpdateForms": {
+      "firstName": {
+        "type": "text",
+        "name": "firstName"
+      },
+      "secondName": {
+        "type": "text",
+        "name": "secondName"
+      },
+      "lastName": {
+        "type": "text",
+        "name": "lastName"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone"
+      },
+      "address": {
+        "type": "text",
+        "name": "address",
+        "label": "Address"
+      }
+    },
+    "modalAdditionForms": {
+      "firstName": {
+        "type": "text",
+        "name": "firstName",
+        "label": "First Name",
+        "placeHolder": "Enter Your First Name"
+      },
+      "secondName": {
+        "type": "text",
+        "name": "secondName",
+        "label": "Second Name",
+        "placeHolder": "Enter Your Second Name"
+      },
+      "lastName": {
+        "type": "text",
+        "name": "lastName",
+        "label": "Last Name",
+        "placeHolder": "Enter Your Last Name"
+      },
+
+      "phone": {
+        "type": "text",
+        "name": "phone",
+        "label": "Phone",
+        "placeHolder": "Enter Your phone"
+      },
+      "address": {
+        "type": "text",
+        "name": "address",
+        "label": "Address"
+      },
+      "Email": {
+        "type": "email",
+        "name": "Email",
+        "label": "Email",
+        "placHolder": "Enter Your Email"
+      },
+      "userName": {
+        "type": "text",
+        "name": "userName",
+        "label": "User Name",
+        "placeHolder": "Enter Your UserName"
+      },
+      "password": {
+        "type": "password",
+        "name": "password",
+        "label": "Password",
+        "placeHolder": "Enter Password"
+      }
+    },
+    "title": "All Assistant",
+    "description": "You can see All Assistants here..",
+    "addUser": "http://localhost:8080/assistant/addAssistant",
+    "deleteUser": "http://localhost:8080/assistant/deleteAssistant",
+    "updateUser": "http://localhost:8080/assistant/updateAssistant",
+    "getAll": "http://localhost:8080/assistant/getAssistant"
+  },
+
+  "labFD": {
+    "state": {
+      "userName": "",
+      "password": "",
+      "Email": "",
+      "phone": "",
+      "address": "",
+      "organization": ""
+    },
+    "columnsTable": {
+      "organization": {
+        "name": "Organization",
+        "selector": "organization",
+        "sortable": true,
+        "center": true
+      },
+      "address": {
+        "name": "address",
+        "selector": "address",
+        "sortable": true,
+        "center": true
+      },
+      "phone": {
+        "name": "phone",
+        "selector": "phone",
+        "sortable": true,
+        "center": true,
+        "hide": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "modalAdditionForms": {
+      "organization": {
+        "type": "text",
+        "name": "organization",
+        "label": "Organization"
+      },
+      "userName": {
+        "type": "text",
+        "name": "userName",
+        "label": "User Name"
+      },
+
+      "password": {
+        "type": "password",
+        "name": "password",
+        "label": "Password"
+      },
+      "Email": {
+        "type": "email",
+        "name": "Email",
+        "label": "Email"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone",
+        "label": "Phone"
+      },
+      "address": {
+        "type": "text",
+        "name": "address",
+        "label": "Address"
+      }
+    },
+    "modalUpdateForms": {
+      "organization": {
+        "type": "text",
+        "name": "organization",
+        "label": "Organization"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone",
+        "label": "Phone"
+      },
+      "address": {
+        "type": "text",
+        "name": "address",
+        "label": "Address"
+      }
+    },
+    "title": "All Lab FrontDisks",
+    "description": "You can see All Lab FrontDists here..",
+    "addUser": "http://localhost:8080/frontdisk/addLabFrontDisk",
+    "deleteUser": "http://localhost:8080/frontdisk/deletelabFD",
+    "updateUser": "http://localhost:8080/frontdisk/updatelabFD",
+    "getAll": "http://localhost:8080/frontdisk/getlabFD",
+    "getAllDataFD": "http://localhost:8080/lab/getAll",
+    "getLabIdInSession": ""
+  },
+  "radioFD": {
+    "state": {
+      "userName": "",
+      "password": "",
+      "Email": "",
+      "phone": "",
+      "address": "",
+      "organization": ""
+    },
+    "columnsTable": {
+      "organization": {
+        "name": "Organization",
+        "selector": "organization",
+        "sortable": true,
+        "center": true
+      },
+      "address": {
+        "name": "address",
+        "selector": "address",
+        "sortable": true,
+        "center": true
+      },
+      "phone": {
+        "name": "Phone",
+        "selector": "phone",
+        "sortable": true,
+        "center": true,
+        "hide": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "modalAdditionForms": {
+      "organization": {
+        "type": "text",
+        "name": "organization",
+        "label": "Organization"
+      },
+      "userName": {
+        "type": "text",
+        "name": "userName",
+        "label": "User Name"
+      },
+
+      "password": {
+        "type": "password",
+        "name": "password",
+        "label": "Password"
+      },
+      "Email": {
+        "type": "email",
+        "name": "Email",
+        "label": "Email"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone",
+        "label": "Phone"
+      },
+      "address": {
+        "type": "text",
+        "name": "address",
+        "label": "Address"
+      }
+    },
+    "modalUpdateForms": {
+      "organization": {
+        "type": "text",
+        "name": "organization"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone"
+      },
+      "address": {
+        "type": "text",
+        "name": "address"
+      }
+    },
+    "title": "All Radios FrontDisks",
+    "description": "You can see here all Radios FrontDisks..",
+    "addUser": "http://localhost:8080/frontdisk/addradioFrontDisk",
+    "deleteUser": "http://localhost:8080/frontdisk/deleteradioFD",
+    "updateUser": "http://localhost:8080/frontdisk/updateradioFD",
+    "getAll": "http://localhost:8080/frontdisk/getradioFD",
+    "getAllDataFD": "http://localhost:8080/radio/getAll",
+    "getLabIdInSession": ""
+  },
+  "pathologyFD": {
+    "state": {
+      "userName": "",
+      "password": "",
+      "Email": "",
+      "phone": "",
+      "address": "",
+      "organization": ""
+    },
+    "columnsTable": {
+      "organization": {
+        "name": "organization",
+        "selector": "organization",
+        "sortable": true,
+        "center": true
+      },
+      "address": {
+        "name": "address",
+        "selector": "address",
+        "sortable": true,
+        "center": true
+      },
+      "phone": {
+        "name": "phone",
+        "selector": "phone",
+        "sortable": true,
+        "center": true,
+        "hide": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "modalAdditionForms": {
+      "organization": {
+        "type": "text",
+        "name": "organization",
+        "label": "Organization"
+      },
+      "userName": {
+        "type": "text",
+        "name": "userName",
+        "label": "User Name"
+      },
+
+      "password": {
+        "type": "password",
+        "name": "password",
+        "label": "Password"
+      },
+      "Email": {
+        "type": "email",
+        "name": "Email",
+        "label": "Email"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone",
+        "label": "Phone"
+      },
+      "address": {
+        "type": "text",
+        "name": "address",
+        "label": "Address"
+      }
+    },
+    "modalUpdateForms": {
+      "organization": {
+        "type": "text",
+        "name": "organization"
+      },
+      "userName": {
+        "type": "text",
+        "name": "userName"
+      },
+
+      "password": {
+        "type": "password",
+        "name": "password"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone"
+      },
+      "address": {
+        "type": "text",
+        "name": "address"
+      }
+    },
+    "title": "All pathology FrontDisks",
+    "description": "You can see all Pathology FrontDisks..",
+    "addUser": "http://localhost:8080/frontdisk/addpathoFrontDisk",
+    "deleteUser": "http://localhost:8080/frontdisk/deletepathobFD",
+    "updateUser": "http://localhost:8080/frontdisk/updatepathoFD",
+    "getAll": "http://localhost:8080/frontdisk/getpathoFD",
+    "getAllDataFD": "http://localhost:8080/patho/getAll",
+    "getLabIdInSession": ""
+  },
+  "doctorFD": {
+    "state": {
+      "userName": "",
+      "password": "",
+      "Email": "",
+      "phone": "",
+      "address": "",
+      "organization": ""
+    },
+    "columnsTable": {
+      "organization": {
+        "name": "organization",
+        "selector": "organization",
+        "sortable": true,
+        "center": true
+      },
+      "address": {
+        "name": "address",
+        "selector": "address",
+        "sortable": true,
+        "center": true
+      },
+      "phone": {
+        "name": "phone",
+        "selector": "phone",
+        "sortable": true,
+        "center": true,
+        "hide": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "modalAdditionForms": {
+      "organization": {
+        "type": "text",
+        "name": "organization",
+        "label": "Organization"
+      },
+
+      "userName": {
+        "type": "text",
+        "name": "userName",
+        "label": "User Name"
+      },
+
+      "password": {
+        "type": "password",
+        "name": "password"
+      },
+      "Email": {
+        "type": "email",
+        "name": "Email",
+        "label": "Email"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone",
+        "label": "Phone"
+      },
+      "address": {
+        "type": "text",
+        "name": "address",
+        "label": "Address"
+      }
+    },
+    "modalUpdateForms": {
+      "organization": {
+        "type": "text",
+        "name": "organization"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone"
+      },
+      "address": {
+        "type": "text",
+        "name": "address"
+      }
+    },
+    "title": "All Doctor FrontDisks",
+    "description": "See All Doctor FrontDisks here..",
+    "addUser": "http://localhost:8080/frontdisk/addDoctorFD",
+    "deleteUser": "http://localhost:8080/frontdisk/deleteDoctorFD",
+    "updateUser": "http://localhost:8080/frontdisk/updateDoctorFD",
+    "getAll": "http://localhost:8080/frontdisk/getDoctorFD",
+    "getAllDataFD": "http://localhost:8080/doctor/getDoctor",
+    "getLabIdInSession": ""
+  },
+  "pharmacist": {
+    "state": {
+      "firstName": "",
+      "secondName": "",
+      "lastName": "",
+      "userName": "",
+      "password": "",
+      "Email": "",
+      "phone": ""
+    },
+    "columnsTable": {
+      "firstName": {
+        "name": "First Name",
+        "selector": "firstName",
+        "sortable": true,
+        "center": true
+      },
+      "secondName": {
+        "name": "Second Name",
+        "selector": "secondName",
+        "sortable": true,
+        "center": true
+      },
+      "lastName": {
+        "name": "Last Name",
+        "selector": "lastName",
+        "sortable": true,
+        "center": true
+      },
+      "phone": {
+        "name": "Phone",
+        "selector": "phone",
+        "sortable": true,
+        "center": true,
+        "hide": true
+      },
+
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "modalUpdateForms": {
+      "firstName": {
+        "type": "text",
+        "name": "firstName"
+      },
+      "secondName": {
+        "type": "text",
+        "name": "secondName"
+      },
+      "lastName": {
+        "type": "text",
+        "name": "lastName"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone"
+      }
+    },
+    "modalAdditionForms": {
+      "firstName": {
+        "type": "text",
+        "name": "firstName"
+      },
+      "secondName": {
+        "type": "text",
+        "name": "secondName"
+      },
+      "lastName": {
+        "type": "text",
+        "name": "lastName"
+      },
+      "phone": {
+        "type": "text",
+        "name": "phone"
+      },
+      "Email": {
+        "type": "email",
+        "name": "Email"
+      },
+      "userName": {
+        "type": "text",
+        "name": "userName"
+      },
+      "password": {
+        "type": "password",
+        "name": "password"
+      }
+    },
+    "title": "All Pharmacists",
+    "description": "You can see All Pharmacists here...",
+    "addUser": "http://localhost:8080/pharmacist/addPharmacist",
+    "deleteUser": "http://localhost:8080/pharmacist/deletePharmacist",
+    "updateUser": "http://localhost:8080/pharmacist/updatePharmacist",
+    "getAll": "http://localhost:8080/pharmacist/getPharmacist"
+  }
+}

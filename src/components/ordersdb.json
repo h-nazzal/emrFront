@@ -1,0 +1,473 @@
+{
+  "lab": {
+    "state": {
+      "date": "",
+      "comments": "",
+      "status": "",
+      "result": ""
+    },
+    "columnsTable": {
+      "ptname": {
+        "name": "Patient Name",
+        "selector": "PtFirstName",
+        "sortable": true,
+        "center": true
+      },
+
+      "labName": {
+        "name": "Lab Name",
+        "selector": "labName",
+        "sortable": true,
+        "center": true
+      },
+      "comments": {
+        "name": "Comments",
+        "selector": "comments",
+        "sortable": true,
+        "center": true
+      },
+      "Date": {
+        "name": "Date",
+        "selector": "createdAt",
+        "sortable": true,
+        "center": true
+      },
+
+      "phone": {
+        "name": "Phone",
+        "selector": "phone",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "columnsTableForPatientAcceptOrders": {
+      "drname": {
+        "name": "Ordering Doctor",
+        "selector": "drname",
+        "sortable": true,
+        "center": true
+      },
+      "Date": {
+        "name": "Date",
+        "selector": "createdAt",
+        "sortable": true,
+        "center": true
+      },
+      "ptname": {
+        "name": "Patient Name",
+        "selector": "PtFirstName",
+        "sortable": true,
+        "center": true
+      },
+      "labName": {
+        "name": "investigation",
+        "selector": "labName",
+        "sortable": true,
+        "center": true
+      },
+      "comments": {
+        "name": "Comments",
+        "selector": "comments",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "columnsTableForPatientOrders": {
+      "Date": {
+        "name": "Date",
+        "selector": "createdAt",
+        "sortable": true,
+        "center": true
+      },
+      "drname": {
+        "name": "Ordering Doctor",
+        "selector": "drname",
+        "sortable": true,
+        "center": true
+      },
+      "comments": {
+        "name": "Comments",
+        "selector": "comments",
+        "sortable": true,
+        "center": true
+      },
+      "labName": {
+        "name": "investigation",
+        "selector": "labName",
+        "sortable": true,
+        "center": true
+      },
+
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "modalForms": {
+      "date": {
+        "type": "date",
+        "name": "date"
+      },
+      "comments": {
+        "type": "text",
+        "name": "comments"
+      }
+    },
+    "uploadResultForm": {
+      "result": {
+        "type": "file",
+        "name": "result"
+      }
+    },
+    "AdditionObject": {
+      "date": "",
+      "comments": "",
+      "ptId": "",
+      "drId": "",
+      "labId": ""
+    },
+    "AcceptObject": {
+      "id": "",
+      "labFDId": ""
+    },
+    "titleForPatientOrders": "All Patients Orders",
+    "descriptionForPatientOrders": "You Can Accept patient Orders from here...",
+    "title": "All Lab Orders",
+    "description": "From here you can see and upload Results for all accepted orders",
+    "addOrder": "http://localhost:8080/order/addlabOrder",
+    "deleteOrder": "http://localhost:8080/order/deletelabOrder",
+    "updateOrder": "http://localhost:8080/allergy/updateAllergy",
+    "getAll": "http://localhost:8080/lab/getAll",
+    "acceptOrder": "http://localhost:8080/order/acceptOrder",
+    "getNotAcceptedOrders": "http://localhost:8080/order/getlabOrderByPtCode",
+    "getAllAcceptedOrders": "",
+    "getAllOrdersByPtID": "http://localhost:8080/order/getlabOrderByPtId",
+    "getAllOrdersByLabId": "http://localhost:8080/order/getlabOrderbyLab",
+    "getAllResultsById": "http://localhost:8080/order/getResultsbyLab",
+    "getAllDoctorOrders": "http://localhost:8080/order/getlabOrderbyDrid",
+    "uploadResult": "http://localhost:8080/order/labs/updateResult"
+  },
+  "pathology": {
+    "state": {
+      "Date": "",
+      "comments": "",
+      "status": "",
+      "result": ""
+    },
+    "columnsTableForPatientAcceptOrders": {
+      "comments": {
+        "name": "Comments",
+        "selector": "comments",
+        "sortable": true,
+        "center": true
+      },
+      "ptname": {
+        "name": "Patient Name",
+        "selector": "PtFirstName",
+        "sortable": true,
+        "center": true
+      },
+      "drname": {
+        "name": "Ordering Doctor",
+        "selector": "drname",
+        "sortable": true,
+        "center": true
+      },
+      "pathoName": {
+        "name": "pathology Name",
+        "selector": "pathoName",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "columnsTable": {
+      "ptname": {
+        "name": "Patient Name",
+        "selector": "PtFirstName",
+        "sortable": true,
+        "center": true
+      },
+      "pathoName": {
+        "name": "pathology Name",
+        "selector": "pathoName",
+        "sortable": true,
+        "center": true
+      },
+      "Date": {
+        "name": "Date",
+        "selector": "createdAt",
+        "sortable": true,
+        "center": true
+      },
+      "comments": {
+        "name": "Comments",
+        "selector": "comments",
+        "sortable": true,
+        "center": true
+      },
+      "phone": {
+        "name": "Phone",
+        "selector": "phone",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "columnsTableForPatientOrders": {
+      "Date": {
+        "name": "Date",
+        "selector": "createdAt",
+        "sortable": true,
+        "center": true
+      },
+      "comments": {
+        "name": "Comments",
+        "selector": "comments",
+        "sortable": true,
+        "center": true
+      },
+      "drname": {
+        "name": "Ordering Doctor",
+        "selector": "drname",
+        "sortable": true,
+        "center": true
+      },
+      "pathoName": {
+        "name": "pathology Name",
+        "selector": "pathoName",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "modalForms": {
+      "Date": {
+        "type": "date",
+        "name": "Date"
+      },
+      "comments": {
+        "type": "text",
+        "name": "comments"
+      }
+    },
+    "uploadResultForm": {
+      "result": {
+        "type": "file",
+        "name": "result"
+      }
+    },
+    "AdditionObject": {
+      "Date": "",
+      "comments": "",
+      "ptId": "",
+      "drId": "",
+      "pathoId": ""
+    },
+    "AcceptObject": {
+      "id": "",
+      "pathoFDId": ""
+    },
+    "titleForPatientOrders": "All Patients Orders",
+    "descriptionForPatientOrders": "You Can Accept patient Orders from here...",
+    "title": "All Pathology Orders",
+    "description": "From here you can see and upload Results for all accepted orders",
+    "addOrder": "http://localhost:8080/order/addpathoOrder",
+    "deleteOrder": "http://localhost:8080/order/deletepathoOrder",
+    "updateOrder": "http://localhost:8080/allergy/updateAllergy",
+    "getAll": "http://localhost:8080/allergy/getAllergy",
+    "acceptOrder": "http://localhost:8080/order/acceptOrderforPatho",
+    "getNotAcceptedOrders": "http://localhost:8080/order/getpathoOrderPtCode",
+    "getAllAcceptedOrders": "",
+    "getAllOrdersByPtID": "http://localhost:8080/order/getpathoOrderByPtId",
+    "getAllOrdersByLabId": "http://localhost:8080/order/getpathoOrderbyLab",
+    "getAllResultsById": "http://localhost:8080/order/getResultsbyPatho",
+    "getAllDoctorOrders": "http://localhost:8080/order/getpathoOrderbyDrid",
+    "uploadResult": "http://localhost:8080/order/pathelogys/updateResult"
+  },
+  "radio": {
+    "state": {
+      "Date": "",
+      "comments": "",
+      "status": "",
+      "result": ""
+    },
+    "columnsTable": {
+      "ptname": {
+        "name": "Patient Name",
+        "selector": "PtFirstName",
+        "sortable": true,
+        "center": true
+      },
+      "radioName": {
+        "name": "requested imaging ",
+        "selector": "radioName",
+        "sortable": true,
+        "center": true
+      },
+      "Date": {
+        "name": "Date",
+        "selector": "createdAt",
+        "sortable": true,
+        "center": true
+      },
+      "comments": {
+        "name": "Comments",
+        "selector": "comments",
+        "sortable": true,
+        "center": true
+      },
+      "phone": {
+        "name": "Phone",
+        "selector": "phone",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "columnsTableForPatientAcceptOrders": {
+      "comments": {
+        "name": "Comments",
+        "selector": "comments",
+        "sortable": true,
+        "center": true
+      },
+      "drname": {
+        "name": "Ordering Doctor",
+        "selector": "drname",
+        "sortable": true,
+        "center": true
+      },
+      "radioName": {
+        "name": "requested imaging",
+        "selector": "radioName",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "columnsTableForPatientOrders": {
+      "Date": {
+        "name": "Date",
+        "selector": "createdAt",
+        "sortable": true,
+        "center": true
+      },
+      "comments": {
+        "name": "Comments",
+        "selector": "comments",
+        "sortable": true,
+        "center": true
+      },
+      "drname": {
+        "name": "Ordering Doctor",
+        "selector": "drname",
+        "sortable": true,
+        "center": true
+      },
+      "radioName": {
+        "name": "requested imaging ",
+        "selector": "radioName",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "modalForms": {
+      "Date": {
+        "type": "date",
+        "name": "Date"
+      },
+      "comments": {
+        "type": "text",
+        "name": "comments"
+      }
+    },
+    "uploadResultForm": {
+      "result": {
+        "type": "file",
+        "name": "result"
+      }
+    },
+    "AdditionObject": {
+      "Date": "",
+      "comments": "",
+      "ptId": "",
+      "drId": "",
+      "radioId": ""
+    },
+    "AcceptObject": {
+      "id": "",
+      "pathoFDId": ""
+    },
+    "titleForPatientOrders": "All Patients Orders",
+    "descriptionForPatientOrders": "You Can Accept patient Orders from here...",
+    "title": "All Pathology Orders",
+    "description": "From here you can see and upload Results for all accepted orders",
+    "addOrder": "http://localhost:8080/order/addradioOrder",
+    "deleteOrder": "http://localhost:8080/order/deleteRadioOrder",
+    "updateOrder": "http://localhost:8080/allergy/updateAllergy",
+    "getAll": "http://localhost:8080/allergy/getAllergy",
+    "acceptOrder": "http://localhost:8080/order/acceptOrderforRadio",
+    "getNotAcceptedOrders": "http://localhost:8080/order/getRadioOrderPtCode",
+    "getAllAcceptedOrders": "",
+    "getAllOrdersByPtID": "http://localhost:8080/order/getradioOrderByPtId",
+    "getAllOrdersByLabId": "http://localhost:8080/order/getRadioOrderbyLab",
+    "getAllResultsById": "http://localhost:8080/order/getResultsbyRadio",
+    "getAllDoctorOrders": "http://localhost:8080/order/getradioOrderbyDrid",
+    "uploadResult": "http://localhost:8080/order/radios/updateResult"
+  }
+}

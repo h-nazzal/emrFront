@@ -1,0 +1,163 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+:root {
+  --card-bg: #31354E;
+  --bar-bg: #7B63D4;
+  --dot-bg: #E056B1;
+  --timeline-bg: #C0C0C0;
+  --snow: #DFDFE2;
+  --light-grey: #72758E;
+  --hr-line: #393D56;
+}
+ h1, h2 {
+  padding:0;
+  margin:0;
+}
+h1 {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--light-grey);
+  text-transform: uppercase;
+}
+p {
+  color: var(--snow);
+  font-size: 0.9em;
+  /* max-width: 70%; */
+  text-align: center;
+  /* padding: 10px; */
+}
+h2 {
+  color: var(--card-bg);
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.card {
+  height: 450px;
+  width: 100%;
+  border-radius: 15px;
+  perspective: 1000px;
+  background: var(--card-bg);
+  color: #fff;
+}
+.icons-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 30px;
+}
+.icons-header span {
+  margin: 15px 10px 20px 10px;
+  color: var(--snow);
+  font-size: 1em;
+}
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+}
+#profile {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  box-shadow:  23px 23px 46px #252736,
+             -23px -23px 46px #31354A;
+  transition: all .4s ease;
+}
+#profile:hover {
+  filter: saturate(2);
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+hr {
+  border: 1px solid var(--hr-line);
+  padding: 0px;
+  margin:0px;
+}
+.button-wrapper {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.more {
+    cursor: pointer;
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 100px;
+  border-radius: 20px;
+  background: rgb(123,99,212);
+background: linear-gradient(90deg, rgba(123,99,212,1) 0%, rgba(250,86,177,1) 100%);
+  font-weight: 600px;
+  color: var(--snow);
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 600;
+}
+.details {
+  display: none;
+  height: 305px;
+  width: 300px;
+}
+.achievements-banner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.timeline-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.bar {
+  margin: 10px 0px 0px 20px;
+  height: 80%;
+  width: 5px;
+  background: var(--bar-bg);
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin-left: -5px;
+  margin-bottom: 60px;
+  margin-top: 20px;
+  border-radius: 50%;
+  background: var(--dot-bg);
+}
+.description-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.description {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  height: 60px;
+  width: 100px;
+  margin: 10px 0px 10px 20px;
+  border-radius: 10px;
+  background: var(--timeline-bg);
+  color: var(--card-bg);
+  transition: all .4s ease;
+  box-shadow: 6px 8px 5px 0px rgba(84,72,72,0.75);
+-webkit-box-shadow: 6px 8px 5px 0px rgba(84,72,72,0.75);
+-moz-box-shadow: 6px 8px 5px 0px rgba(84,72,72,0.75);
+}
+.description:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  cursor: pointer;
+}

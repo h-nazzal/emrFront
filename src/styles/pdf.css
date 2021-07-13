@@ -1,0 +1,12 @@
+.pdf{
+    min-height:84px;
+    border:1px solid black;
+    max-width:420px;
+    margin: 0 auto;
+    background-color: teal;
+  overflow-x: hidden;
+    height: 400px;
+  }
+  td,th{
+    padding: 20px ;
+  }

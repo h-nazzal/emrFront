@@ -1,0 +1,333 @@
+{
+  "allergy": {
+    "state": {
+      "name": "",
+      "type": ""
+    },
+    "columnsTable": {
+      "name": {
+        "name": "Name",
+        "selector": "name",
+        "sortable": true,
+        "center": true
+      },
+      "type": {
+        "name": "type",
+        "selector": "type",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+
+        "width": "300px"
+      }
+    },
+    "title": "All Allergy Types",
+    "description": "You will find all Allergy here..",
+    "modalForms": {
+      "name": {
+        "type": "text",
+        "name": "name",
+        "label": "Name",
+        "placeHolder": "Enter Allergy Name"
+      },
+      "type": {
+        "type": "text",
+        "name": "type",
+        "label": "Type",
+        "placeHolder": "Choose Allergy Type"
+      }
+    },
+    "addType": "http://localhost:8080/allergy/addAllergy",
+    "deleteType": "http://localhost:8080/allergy/deleteAllergy",
+    "updateType": "http://localhost:8080/allergy/updateAllergy",
+    "getAll": "http://localhost:8080/allergy/getAllergy"
+  },
+  "disease": {
+    "state": {
+      "name": "",
+      "code": "",
+      "abbreviation": ""
+    },
+    "columnsTable": {
+      "name": {
+        "name": "Name",
+        "selector": "name",
+        "sortable": true
+      },
+      "abbreviation": {
+        "name": "Abbreviation",
+        "selector": "abbreviation",
+        "sortable": true
+      },
+      "code": {
+        "name": "Code",
+        "selector": "code",
+        "sortable": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "modalForms": {
+      "name": {
+        "type": "text",
+        "name": "name",
+        "label": "Name",
+        "placeHolder": "Enter Disease Name"
+      },
+      "code": {
+        "type": "text",
+        "name": "code",
+        "label": "Code",
+        "placeHolder": "Enter Disease Code"
+      },
+      "abbreviation": {
+        "type": "text",
+        "name": "abbreviation",
+        "label": "abbreviation",
+        "placeHolder": "Enter Disease Abbreviation"
+      }
+    },
+    "title": "All Diseases Types",
+    "description": "You will find All Diseases here..",
+    "addType": "http://localhost:8080/disease/addDiseases",
+    "deleteType": "http://localhost:8080/disease/deleteDiseases",
+    "updateType": "http://localhost:8080/disease/updateDiseases",
+    "getAll": "http://localhost:8080/disease/getAll"
+  },
+  "drug": {
+    "state": {
+      "name": ""
+    },
+    "columnsTable": {
+      "name": {
+        "name": "name",
+        "selector": "name",
+        "sortable": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "modalForms": {
+      "drugName": {
+        "type": "text",
+        "name": "name",
+        "label": "Name",
+        "placeHolder": "Enter Drug Name"
+      }
+    },
+    "title": "All Drugs Types",
+    "description": "You will find all Drugs here..",
+    "addType": "http://localhost:8080/drug/addDrug",
+    "deleteType": "http://localhost:8080/drug/deleteDrug",
+    "updateType": "http://localhost:8080/drug/updateDrug",
+    "getAll": "http://localhost:8080/drug/getAll"
+  },
+
+  "lab": {
+    "state": {
+      "name": "",
+      "abbreviation": ""
+    },
+    "columnsTable": {
+      "name": {
+        "name": "Name",
+        "selector": "name",
+        "sortable": true,
+        "center": true
+      },
+      "abbreviation": {
+        "name": "abbreviation",
+        "selector": "abbreviation",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+
+        "width": "300px"
+      }
+    },
+    "title": "All Labs Types",
+    "description": "You will see here all labs Types...",
+    "modalForms": {
+      "name": {
+        "type": "text",
+        "name": "name",
+        "label": "Name",
+        "placeHolder": "Enter Lab Name"
+      },
+      "abbreviation": {
+        "type": "text",
+        "name": "abbreviation",
+        "label": "Abbreviation",
+        "placeHolder": "Enter Lab Abbreviation"
+      }
+    },
+    "addType": "http://localhost:8080/lab/addlab",
+    "deleteType": "http://localhost:8080/lab/deletelab",
+    "updateType": "http://localhost:8080/lab/updatedlab",
+    "getAll": "http://localhost:8080/lab/getAll"
+  },
+  "pathology": {
+    "state": {
+      "name": "",
+      "abbreviation": ""
+    },
+    "columnsTable": {
+      "name": {
+        "name": "Name",
+        "selector": "name",
+        "sortable": true,
+        "center": true
+      },
+      "abbreviation": {
+        "name": "abbreviation",
+        "selector": "abbreviation",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+
+        "width": "300px"
+      }
+    },
+    "title": "All Pathologies Types",
+    "description": "You will see here all Pathologies Types...",
+    "modalForms": {
+      "name": {
+        "type": "text",
+        "name": "name",
+        "label": "Name",
+        "placeHolder": "Enter Pathology Name"
+      },
+      "abbreviation": {
+        "type": "text",
+        "name": "abbreviation",
+        "label": "Abbreviation",
+        "placeHolder": "Enter Pathology abbreviation"
+      }
+    },
+    "addType": "http://localhost:8080/patho/addpatho",
+    "deleteType": "http://localhost:8080/patho/deletepatho",
+    "updateType": "http://localhost:8080/patho/updatedpatho",
+    "getAll": "http://localhost:8080/patho/getAll"
+  },
+  "radiology": {
+    "state": {
+      "name": "",
+      "abbreviation": ""
+    },
+    "columnsTable": {
+      "name": {
+        "name": "Name",
+        "selector": "name",
+        "sortable": true,
+        "center": true
+      },
+      "abbreviation": {
+        "name": "abbreviation",
+        "selector": "abbreviation",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+
+        "width": "300px"
+      }
+    },
+    "title": "All radiologies Types",
+    "description": "You will see here all radiologies Types...",
+    "modalForms": {
+      "name": {
+        "type": "text",
+        "name": "name",
+        "label": "Name",
+        "placeHolder": "Enter Radio Name"
+      },
+      "abbreviation": {
+        "type": "text",
+        "name": "abbreviation",
+        "label": "Abbreviation",
+        "placeHolder": "Enter Radio Abbreviation"
+      }
+    },
+    "addType": "http://localhost:8080/radio/addRadio",
+    "deleteType": "http://localhost:8080/radio/deleteRadio",
+    "updateType": "http://localhost:8080/radio/updatedRadio",
+    "getAll": "http://localhost:8080/radio/getAll"
+  },
+  "surgeries": {
+    "state": {
+      "name": "",
+      "abbreviation": ""
+    },
+    "columnsTable": {
+      "name": {
+        "name": "Name",
+        "selector": "name",
+        "sortable": true,
+        "center": true
+      },
+      "abbreviation": {
+        "name": "abbreviation",
+        "selector": "abbreviation",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+
+        "width": "300px"
+      }
+    },
+    "title": "All Surgeries Types",
+    "description": "You will see here all Surgeries Types...",
+    "modalForms": {
+      "name": {
+        "type": "text",
+        "name": "name",
+        "label": "Name",
+        "placeHolder": "Enter Surgery Name"
+      },
+      "abbreviation": {
+        "type": "text",
+        "name": "abbreviation",
+        "label": "Abbreviation",
+        "placeHolder": "Enter Surgery Abbreviation"
+      }
+    },
+    "addType": "http://localhost:8080/surgery/addsurgery",
+    "deleteType": "http://localhost:8080/surgery/deletesurgery",
+    "updateType": "http://localhost:8080/surgery/updatedsurgery",
+    "getAll": "http://localhost:8080/surgery/getAll"
+  }
+}

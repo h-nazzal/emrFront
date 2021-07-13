@@ -1,0 +1,138 @@
+{
+  "patientsOnVisit": {
+    "columnsTable": {
+      "firstName": {
+        "name": "First Name",
+        "selector": "firstName",
+        "sortable": true
+      },
+      "secondName": {
+        "name": "Second Name",
+        "selector": "secondName",
+        "sortable": true
+      },
+      "lastName": {
+        "name": "Last Name",
+        "selector": "lastName",
+        "sortable": true
+      },
+      "phone": {
+        "name": "phone",
+        "selector": "phone",
+        "sortable": true
+      },
+      "address": {
+        "name": "Address",
+        "selector": "address",
+        "sortable": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "title": "All patients On Active Visit",
+    "description": "From here you can see All patients on Active visits",
+    "getAll": "http://localhost:8080/session/getSessionByDate"
+  },
+  "nurseVitals": {
+    "state": {
+      "time": "",
+      "data": "",
+      "temperature": "",
+      "pulse": "",
+      "oxygenSaturation": "",
+      "systolic ": "",
+      "diastolic": "",
+      "bloodPressure": "",
+      "takenBy": "",
+      "bloodGlucose": ""
+    },
+    "columnsTable": {
+      "time": {
+        "name": "Time",
+        "selector": "time",
+        "sortable": true
+      },
+      "temperature": {
+        "name": "Temperature",
+        "selector": "temperature",
+        "sortable": true,
+        "center": true
+      },
+
+      "pulse": {
+        "name": "Pulse",
+        "selector": "pulse",
+        "sortable": true,
+        "center": true
+      },
+      "systolic": {
+        "name": "Blood Pressure",
+        "selector": "systolic",
+        "sortable": true,
+        "center": true,
+        "width": "200px"
+      },
+
+      "oxygenSaturation": {
+        "name": "OxygenSaturation",
+        "selector": "oxygenSaturation",
+        "sortable": true
+      },
+      "bloodGlucose": {
+        "name": "Blood Glucose Level",
+        "selector": "bloodGlucoseLevel",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "modalAdditionForm": {
+      "temperature": {
+        "type": "number",
+        "name": "temperature"
+      },
+      "pulse": {
+        "type": "number",
+        "name": "pulse"
+      },
+      "systolic ": {
+        "type": "number",
+        "name": "systolic "
+      },
+      "diastolic": {
+        "type": "number",
+        "name": "diastolic"
+      },
+      "bloodGlucose": {
+        "type": "number",
+        "name": "bloodGlucose"
+      },
+      "oxygenSaturation": {
+        "type": "number",
+        "name": "oxygenSaturation"
+      },
+      "takenBy": {
+        "type": "autoComplete",
+        "name": "takenBy"
+      }
+    },
+    "title": "All Patient last Visits",
+    "description": "From here you can see and upload Results for all accepted orders",
+    "getAll": "http://localhost:8080/session/getSessionByDate",
+    "getPatientLastVisits": "http://localhost:8080/nurse/getByPtId",
+    "deleteVital": "http://localhost:8080/nurse/deleteRecorder",
+    "addVital": "http://localhost:8080/nurse/addRecord",
+    "getAllData": "http://localhost:8080/nurse/getNurse"
+  }
+}

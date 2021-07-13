@@ -1,0 +1,19 @@
+.MuiDataGrid-colCellTitle{
+    font-size: 1em;
+}
+.MuiDataGrid-cell  {
+        /* min-width: 250px; */
+    /* max-width: 250px; */
+    line-height: 0.3em !important;
+    /* min-height: 100px; */
+    /* max-height: 100px; */
+    font-size: 1em;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    color:black !important;
+}
+.span{
+    color:black
+}

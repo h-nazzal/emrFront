@@ -1,0 +1,74 @@
+{
+  "pharmacyModule": {
+    "state": {
+      "created_date": "",
+      "patientName": "",
+      "notes": ""
+    },
+    "columnsTable": {
+      "created_date": {
+        "name": "Created Date",
+        "selector": "created_date",
+        "sortable": true,
+        "center": true
+      },
+      "notes": {
+        "name": "Notes",
+        "selector": "notes",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "columnsTableForDoctor": {
+      "created_date": {
+        "name": "created_date",
+        "selector": "created_date",
+        "sortable": true,
+        "center": true
+      },
+      "notes": {
+        "name": "Notes",
+        "selector": "notes",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+
+    "modalForms": {
+      "quantity": {
+        "type": "number",
+        "name": "quantity"
+      },
+      "notes": {
+        "type": "text",
+        "name": "notes"
+      },
+
+      "drug": {
+        "type": "text",
+        "name": "drug"
+      },
+      "duration": {
+        "type": "number",
+        "name": "duration"
+      }
+    },
+    "getLastTenPrescription": "http://localhost:8080/visit/PrescriptionByDoctor",
+    "getPatientPrescription": "http://localhost:8080/visit/PrescriptionByPatient",
+    "decpinceDrug": ""
+  }
+}

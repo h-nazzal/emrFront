@@ -1,0 +1,279 @@
+{
+  "allergyStep": {
+    "state": {
+      "name": "",
+      "type": "",
+      "date": "",
+      "status": ""
+    },
+    "columnsTable": {
+      "name": {
+        "name": "Name",
+        "selector": "name",
+        "sortable": true,
+        "center": true
+      },
+      "type": {
+        "name": "Type",
+        "selector": "type",
+        "sortable": true,
+        "center": true
+      },
+      "date": {
+        "name": "Date",
+        "selector": "date",
+        "sortable": true,
+        "center": true
+      },
+      "status": {
+        "name": "Status",
+        "selector": "status",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "500px"
+      }
+    },
+
+    "modalForms": {
+      "name": {
+        "type": "text",
+        "name": "name",
+        "label": "Allergy Name",
+        "placeHolder": "Enter Allergy Name"
+      },
+      "type": {
+        "type": "select",
+        "name": "type",
+        "options": [
+          { "value": "drug", "text": "Drug" },
+          { "value": "other", "text": "Other" }
+        ],
+        "placeHolder": "Choose Allergy Type",
+        "label": "Allergy Type"
+      },
+      "status": {
+        "type": "select",
+        "name": "status",
+        "options": [
+          { "value": "Resolved", "text": "Active" },
+          { "value": "Active", "text": "Resolved" }
+        ],
+        "placeHolder": "Status",
+        "label": "Status"
+      },
+      "date": {
+        "type": "date",
+        "name": "date",
+        "label": "Date",
+        "placeHolder": "Date"
+      }
+    }
+  },
+  "familyHistory": {
+    "state": {
+      "problem": "",
+      "relation": "",
+      "note": ""
+    },
+    "columnsTable": {
+      "problem": {
+        "name": "Problem",
+        "selector": "problem",
+        "sortable": true,
+        "center": true
+      },
+      "relation": {
+        "name": "Relation",
+        "selector": "relation",
+        "sortable": true,
+        "center": true
+      },
+      "note": {
+        "name": "Note",
+        "selector": "note",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "500px"
+      }
+    },
+
+    "modalForms": {
+      "problem": {
+        "type": "autoComplete",
+        "name": "problem",
+        "label": "Problem",
+        "placeHolder": "Choose Disease Type"
+      },
+      "note": {
+        "type": "text",
+        "name": "note",
+        "label": "Note",
+        "placeHolder": "Enter Note"
+      },
+      "relation": {
+        "type": "select",
+        "name": "relation",
+        "options": [
+          { "value": "parent", "text": "Parent" },
+          { "value": "sibling", "text": "Sibling" },
+          { "value": "remoteFamily", "text": "Remote Family" }
+        ],
+        "label": "Relation",
+        "placeHolder": "Choose Relation"
+      }
+    },
+    "getProblemsFromDB": "http://localhost:8080/disease/getAll"
+  },
+  "surgeries": {
+    "state": {
+      "name": "",
+      "date": "",
+      "note": ""
+    },
+    "columnsTable": {
+      "name": {
+        "name": "Name",
+        "selector": "name",
+        "sortable": true,
+        "center": true
+      },
+      "date": {
+        "name": "Date",
+        "selector": "date",
+        "sortable": true,
+        "center": true
+      },
+      "note": {
+        "name": "Note",
+        "selector": "note",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "500px"
+      }
+    },
+
+    "modalForms": {
+      "name": {
+        "type": "autoComplete",
+        "name": "name",
+        "label": "Surgery Name",
+        "placeHolder": "Choose Surgeries Type"
+      },
+      "note": {
+        "type": "text",
+        "name": "note",
+        "label": "Note",
+        "placeHolder": "Enter Note "
+      },
+      "date": {
+        "type": "date",
+        "name": "date",
+        "label": "Date",
+        "placeHolder": "Enter Date"
+      }
+    },
+    "getProblemsFromDB": "http://localhost:8080/surgery/getAll"
+  },
+  "onGoingProblems": {
+    "state": {
+      "problem": "",
+      "date": ""
+    },
+    "columnsTable": {
+      "problem": {
+        "name": "Problem",
+        "selector": "problem",
+        "sortable": true,
+        "center": true
+      },
+      "date": {
+        "name": "Date",
+        "selector": "date",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "500px"
+      }
+    },
+    "modalForms": {
+      "problem": {
+        "type": "autoComplete",
+        "name": "problem",
+        "label": "Problem",
+        "placeHolder": "Choose Disease Type"
+      },
+      "date": {
+        "type": "date",
+        "name": "date",
+        "label": "Date",
+        "placeHolder": "Date"
+      }
+    },
+    "getProblemsFromDB": "http://localhost:8080/disease/getAll"
+  },
+  "interventionsStep": {
+    "state": {
+      "name": "",
+      "note": ""
+    },
+    "columnsTable": {
+      "name": {
+        "name": "Name",
+        "selector": "name",
+        "sortable": true,
+        "center": true
+      },
+      "note": {
+        "name": "Note",
+        "selector": "note",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "500px"
+      }
+    },
+    "modalForms": {
+      "name": {
+        "type": "text",
+        "name": "name",
+        "label": "Name",
+        "placeHolder": "Enter Intervention Name"
+      },
+      "note": {
+        "type": "text",
+        "name": "note",
+        "label": "Note",
+        "placeHolder": "Enter Note"
+      }
+    },
+    "getProblemsFromDB": "http://localhost:8080/disease/getAll"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "Search": {
+    "getObject": {},
+    "columnsTable": {
+      "firstName": {
+        "name": "First Name",
+        "selector": "firstName",
+        "sortable": true
+      },
+      "secondName": {
+        "name": "Second Name",
+        "selector": "secondName",
+        "sortable": true
+      },
+      "lastName": {
+        "name": "lastName",
+        "selector": "lastName",
+        "sortable": true
+      },
+      "phone": {
+        "name": "phone",
+        "selector": "phone",
+        "sortable": true
+      },
+      "address": {
+        "name": "Address",
+        "selector": "address",
+        "sortable": true
+      },
+      "maritalStatus": {
+        "name": "Marital Status",
+        "selector": "maritalStatus",
+        "sortable": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "title": "All Doctor Patients",
+    "description": "you will see here all your Patients",
+    "getAllDoctorPatients": "http://localhost:8080/visit/getallPt"
+  }
+}

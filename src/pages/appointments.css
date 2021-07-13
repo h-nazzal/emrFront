@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+ 	.MuiDataGrid-colCell {
+        background-color: white;
+         text-align: center;
+         
+     }
+     .MuiDataGrid-colCellCheckbox{
+         background-color: white;
+         font-size: 1.5em;
+     }
+     .MuiDataGrid-colCellTitle{
+        background-color: white;
+         font-size: 1.3em;
+         font-family: 'Roboto Slab', serif;
+     }
+ 
+    .MuiDataGrid-colCellWrapper{
+        background-color: white;
+    }
+    .MuiDataGrid-colCellCheckbox{
+         background-color: white;
+
+     }
+     .MuiDataGrid-colCellTitle{
+        /* background-color: yellow; */
+        text-align: center;
+        width: 100%;
+     }
+     .MuiDataGrid-cell{
+         text-align: center;
+        }
+        .MuiDataGrid-cellLeft {
+            text-align: center !important;
+            font-size: 1.2em;
+            
+            /* background-color: yellowgreen; */
+    }
+     .MuiDataGrid-window{
+         background-color: white;
+         width: 100%;
+        }
+        
+     .MuiDataGrid-row{
+
+     }
+.gridDataHeader{
+   box-shadow:  1px 5px 15px #8888;
+   width: auto;
+   
+}
+.hero{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.datagrid{
+    width: 100%;
+    /* background-color: yellow; */
+}
+.header{
+    font-family: 'Dosis', sans-serif;
+    background-color:  #77aac4;
+    font-weight: 500;
+    font-size: 1.5em;
+}
