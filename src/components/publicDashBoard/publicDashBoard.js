@@ -81,7 +81,7 @@ const PublicDashBoard = ({ match }) => {
       icon:
         'https://cdn4.iconfinder.com/data/icons/coronavirus-24/468/28-microscope-512.png',
       discription: 'Pathology information system',
-      role: ['5', '8']
+      role: ['5', '8', '12']
     }, // pathology
     {
       text: 'ERX',
@@ -106,21 +106,31 @@ const PublicDashBoard = ({ match }) => {
 
   const renderBodyForSessionCode = (value, role) => {
     return (
-      <Card
-        className={(value.color ? value.color : ' shadow') + ' dashboard-card'}
+      <Col
+        xs={10}
+        md={4}
+        lg={4}
+        className='my-4 '
         style={{
           cursor: value.role.includes(role) ? 'pointer' : 'not-allowed'
         }}
         onClick={() => {}}
       >
-        <Card.Body>
-          <Card.Title>{value.text}</Card.Title>
-          <Card.Subtitle className='mb-2 text-muted'>
-            {value.discription ? value.discription : ''}
-          </Card.Subtitle>
-        </Card.Body>
-      </Card>
-      // <Card
+        <div class='icon-box'>
+          <div class='icon'>
+            <img
+              src={value.icon ? value.icon : ''}
+              style={{ size: '60px', height: '60px' }}
+            />
+          </div>
+          <h1>
+            <a>{value.text}</a>
+          </h1>
+
+          <p> {value.discription ? value.discription : ''} </p>
+        </div>
+      </Col>
+
       //   className="bg-light"
       //   style={{
       //     height: "15em",
@@ -196,14 +206,17 @@ const PublicDashBoard = ({ match }) => {
                 history.push(match.path + `/choice/${'lab'}`)
               } else if (value.text === 'Lab' && parseInt(role) === 8) {
                 // For Doctors Choices
-                history.push(match.path + '/ptRegistration')
+                history.push(match.path + `'/choice/${'lab'}`)
               } else if (
                 value.text === 'Patient Registration' &&
                 parseInt(role) === 5
               ) {
                 // for pathologyFD Choices
                 history.push(match.path + `/pathologyChoice/${'pathology'}`)
-              } else if (value.text === 'Pathology' && parseInt(role) === 5) {
+              } else if (
+                value.text === 'Pathology' &&
+                (parseInt(role) === 5 || parseInt(role) === 12)
+              ) {
                 // for pathologyFD Choices
                 history.push(match.path + `/pathologyChoice/${'pathology'}`)
               } else if (value.text === 'Pathology' && parseInt(role) === 8) {
@@ -245,7 +258,10 @@ const PublicDashBoard = ({ match }) => {
       }
     })
   }
-
+  if (localStorage.getItem('role') === '') {
+    history.push('/notAuthorized')
+    return null
+  }
   return (
     <div className='container dashboard-container'>
       {/* Switch the DashBoard Routing */}
@@ -389,6 +405,12 @@ const PublicDashBoard = ({ match }) => {
           exact
           path={match.path + '/radioChoice/:type/allRadioChoice'}
           component={AllOrders}
+        />
+        <Route
+          key={28}
+          exact
+          path={match.path + '/radioChoice/:type/allResults'}
+          component={AllResults}
         />
 
         {/* Add order Form in publicDashBoard */}

@@ -27,10 +27,10 @@ export const loadDrugs = () => {
   })
 }
 
-export const loadMYDrugs = () => {
+export const loadMYDrugs = ptId => {
   return new Promise((resolve, reject) => {
     axios
-      .get(base_url + '/visit/mydrugs')
+      .get(base_url + '/visit/mydrugs/' + ptId)
       .then(res => {
         resolve(res.data)
       })

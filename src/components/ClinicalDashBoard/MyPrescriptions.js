@@ -9,14 +9,15 @@ import DataTableComp from '../typesGenerator/dataTable'
 import MyDialog from './MyDialog'
 
 const PColumns = [
-  { selector: 'PNotes', name: 'Notes' },
-  { selector: 'PDate', name: 'Date' }
+  { selector: 'drname', name: 'drname' },
+  { selector: 'PDate', name: 'Date' },
+  { selector: 'PNotes', name: 'Notes' }
 ]
 
 const PDColumns = [
   { selector: 'drug', name: 'drug' },
   { selector: 'notes', name: 'notes' },
-  { selector: 'date', name: 'date' },
+  { selector: 'refill', name: 'refill' },
   { selector: 'Quantity', name: 'Frequency' },
   {
     selector: 'Duration',

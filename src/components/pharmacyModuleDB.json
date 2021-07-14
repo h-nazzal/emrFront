@@ -12,6 +12,11 @@
         "sortable": true,
         "center": true
       },
+      "drname": {
+        "name": "prescribed by",
+        "selector": "drname",
+        "sortable": true
+      },
       "notes": {
         "name": "Notes",
         "selector": "notes",

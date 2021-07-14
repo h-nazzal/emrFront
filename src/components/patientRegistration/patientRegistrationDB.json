@@ -42,7 +42,7 @@
 
     "modalForms": {
       "name": {
-        "type": "text",
+        "type": "autoComplete",
         "name": "name",
         "label": "Allergy Name",
         "placeHolder": "Enter Allergy Name"

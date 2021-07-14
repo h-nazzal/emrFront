@@ -179,7 +179,7 @@ export default function Procedures ({
           <Form className='small-labels' noValidate>
             <Row>
               <Col item xs={6}>
-                <Form.Label>Surgeries</Form.Label>
+                <Form.Label>Surgeries & interventions</Form.Label>
                 {surgys.length > 0 && (
                   <Autocomplete
                     multiple

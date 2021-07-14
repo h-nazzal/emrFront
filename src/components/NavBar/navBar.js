@@ -177,6 +177,38 @@ const NavBar = props => {
           </NavDropdown>
         )
       }
+      case 12: {
+        return (
+          <NavDropdown title='Pathologist  Actions' id='basic-nav-dropdown'>
+            <NavDropdown.Item href='/publicDashBoard'>
+              DashBoard
+            </NavDropdown.Item>
+            <NavDropdown.Item
+              href='#'
+              style={{ cursor: 'pointer', textDecoration: 'none' }}
+            >
+              <Link
+                to={`/publicDashBoard/choice/pathology/allLabOrders`}
+                style={{
+                  cursor: 'pointer',
+                  textDecoration: 'none',
+                  color: '#212529'
+                }}
+              >
+                Get All Accepted Orders
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <SessionCode
+                hidden={false}
+                buttonValue='Get Patient Pathology Orders'
+                fromComponent='Get Patient Pathology Orders'
+                history={history}
+              />
+            </NavDropdown.Item>
+          </NavDropdown>
+        )
+      }
       case 11: {
         return (
           <NavDropdown title='Radiology Actions' id='basic-nav-dropdown'>
@@ -293,13 +325,15 @@ const NavBar = props => {
         )
       }
       default: {
-        return (
-          <NavDropdown title='Pharmacist Actions' id='basic-nav-dropdown'>
-            <NavDropdown.Item href='/publicDashBoard'>
-              DashBoard
-            </NavDropdown.Item>
-          </NavDropdown>
-        )
+        if (role !== '') {
+          return (
+            <NavDropdown title='Pharmacist Actions' id='basic-nav-dropdown'>
+              <NavDropdown.Item href='/publicDashBoard'>
+                DashBoard
+              </NavDropdown.Item>
+            </NavDropdown>
+          )
+        }
       }
     }
   }
@@ -315,7 +349,7 @@ const NavBar = props => {
           )}
         </Nav>
 
-        {props.isAuth && (
+        {props.isAuth && localStorage.getItem('role') !== '' && (
           <React.Fragment>
             <Nav.Link onClick={handleClick} className='text-warning pr-4'>
               <div className='row  align-items-center'>
@@ -411,7 +445,7 @@ const NavBar = props => {
             </Button>
             )
           } */}
-        {props.isAuth ? (
+        {props.isAuth && localStorage.getItem('role') !== '' ? (
           ''
         ) : (
           <Button

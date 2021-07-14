@@ -1,39 +1,38 @@
-import React, { Component } from "react";
-import { Container } from "react-bootstrap";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import "./Navbar.css";
+import React, { Component } from 'react'
+import { Container } from 'react-bootstrap'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+import './Navbar.css'
 
 class EMR extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
+  constructor (props) {
+    super(props)
+    this.state = {}
   }
 
-
-  render() {
+  render () {
     return (
       <Container>
-        <Row className="mt-5 justify-content-center">
+        <Row className='mt-5 justify-content-center'>
           <Col
             xs={10}
             md={4}
             lg={4}
-            className="my-4 "
-              style={{ cursor: "pointer" }}
-              onClick={() => {
-                this.props.history.push(
-                  `${
-                    this.props.history.location.pathname
-                  }/${"search"}`
-                );
-              }}
-            >
- <div class="icon-box">
-              <div class="icon">
+            className='my-4 '
+            style={{ cursor: 'pointer' }}
+            onClick={() => {
+              this.props.history.push(
+                `${this.props.history.location.pathname}/${'search'}`
+              )
+            }}
+          >
+            <div class='icon-box'>
+              <div class='icon'>
                 <img
-                  src={"https://cdn2.iconfinder.com/data/icons/coronavirus-10/512/report-clipboard-medical-checklist-healthcare-512.png"}
-                  style={{ size: "60px", height: "60px" }}
+                  src={
+                    'https://cdn2.iconfinder.com/data/icons/coronavirus-10/512/report-clipboard-medical-checklist-healthcare-512.png'
+                  }
+                  style={{ size: '60px', height: '60px' }}
                 />
               </div>
               <h1>
@@ -42,38 +41,37 @@ class EMR extends Component {
 
               <p> View all patients you are curruntly treating. </p>
             </div>
-
-          
           </Col>
           <Col
             xs={10}
             md={4}
             lg={4}
-            className="my-4 "
-              onClick={() => {
-                this.props.history.push(
-                  `${
-                    this.props.history.location.pathname
-                  }/Futureappointements/${"future"}`
-                );
-              }}
-            >
-
-<div class="icon-box">
-              <div class="icon">
+            className='my-4 '
+            onClick={() => {
+              this.props.history.push(
+                `${
+                  this.props.history.location.pathname
+                }/Futureappointements/${'future'}`
+              )
+            }}
+          >
+            <div class='icon-box'>
+              <div class='icon'>
                 <img
-                  src={"https://cdn2.iconfinder.com/data/icons/coronavirus-10/512/news-feed-mobile-report-virus-128.png"}
-                  style={{ size: "60px", height: "60px" }}
+                  src={
+                    'https://cdn2.iconfinder.com/data/icons/coronavirus-10/512/news-feed-mobile-report-virus-128.png'
+                  }
+                  style={{ size: '60px', height: '60px' }}
                 />
               </div>
               <h1>
                 <a>Future Appointements</a>
               </h1>
 
-              <p>   Get all your Future appointements details. </p>
+              <p> Get all your Future appointements details. </p>
             </div>
           </Col>
-          <Col
+          {/* <Col
             xs={10}
             md={4}
             lg={4}
@@ -98,13 +96,13 @@ class EMR extends Component {
               <a>Current Appointements</a>
             </h1>
 
-            <p>   Get all your current appointements details.</p>
-          </div>
-          </Col>
+            <p>   Get all your current appointements details.</p>*/}
+          {/*</div>*/}
+          {/*</Col>*/}
         </Row>
       </Container>
-    );
+    )
   }
 }
 
-export default EMR;
+export default EMR

@@ -28,7 +28,7 @@
       },
       "Date": {
         "name": "Date",
-        "selector": "createdAt",
+        "selector": "Date",
         "sortable": true,
         "center": true
       },
@@ -56,7 +56,7 @@
       },
       "Date": {
         "name": "Date",
-        "selector": "createdAt",
+        "selector": "Date",
         "sortable": true,
         "center": true
       },
@@ -89,7 +89,7 @@
     "columnsTableForPatientOrders": {
       "Date": {
         "name": "Date",
-        "selector": "createdAt",
+        "selector": "Date",
         "sortable": true,
         "center": true
       },
@@ -147,8 +147,8 @@
       "id": "",
       "labFDId": ""
     },
-    "titleForPatientOrders": "All Patients Orders",
-    "descriptionForPatientOrders": "You Can Accept patient Orders from here...",
+    "titleForPatientOrders": "All Orders",
+    "descriptionForPatientOrders": "You Can Review patients Orders from here...",
     "title": "All Lab Orders",
     "description": "From here you can see and upload Results for all accepted orders",
     "addOrder": "http://localhost:8080/order/addlabOrder",
@@ -172,6 +172,12 @@
       "result": ""
     },
     "columnsTableForPatientAcceptOrders": {
+      "pathoName": {
+        "name": "pathology Name",
+        "selector": "pathoName",
+        "sortable": true,
+        "center": true
+      },
       "comments": {
         "name": "Comments",
         "selector": "comments",
@@ -190,12 +196,7 @@
         "sortable": true,
         "center": true
       },
-      "pathoName": {
-        "name": "pathology Name",
-        "selector": "pathoName",
-        "sortable": true,
-        "center": true
-      },
+
       "actions": {
         "name": "actions",
         "selector": "actions",
@@ -213,13 +214,13 @@
       },
       "pathoName": {
         "name": "pathology Name",
-        "selector": "pathoName",
+        "selector": "name",
         "sortable": true,
         "center": true
       },
       "Date": {
         "name": "Date",
-        "selector": "createdAt",
+        "selector": "Date",
         "sortable": true,
         "center": true
       },
@@ -246,7 +247,7 @@
     "columnsTableForPatientOrders": {
       "Date": {
         "name": "Date",
-        "selector": "createdAt",
+        "selector": "Date",
         "sortable": true,
         "center": true
       },
@@ -303,8 +304,8 @@
       "id": "",
       "pathoFDId": ""
     },
-    "titleForPatientOrders": "All Patients Orders",
-    "descriptionForPatientOrders": "You Can Accept patient Orders from here...",
+    "titleForPatientOrders": "All Orders",
+    "descriptionForPatientOrders": "You Can Review the Orders from here...",
     "title": "All Pathology Orders",
     "description": "From here you can see and upload Results for all accepted orders",
     "addOrder": "http://localhost:8080/order/addpathoOrder",
@@ -342,7 +343,7 @@
       },
       "Date": {
         "name": "Date",
-        "selector": "createdAt",
+        "selector": "date",
         "sortable": true,
         "center": true
       },
@@ -367,15 +368,15 @@
       }
     },
     "columnsTableForPatientAcceptOrders": {
-      "comments": {
-        "name": "Comments",
-        "selector": "comments",
-        "sortable": true,
-        "center": true
-      },
       "drname": {
         "name": "Ordering Doctor",
         "selector": "drname",
+        "sortable": true,
+        "center": true
+      },
+      "comments": {
+        "name": "Comments",
+        "selector": "comments",
         "sortable": true,
         "center": true
       },
@@ -396,7 +397,7 @@
     "columnsTableForPatientOrders": {
       "Date": {
         "name": "Date",
-        "selector": "createdAt",
+        "selector": "ate",
         "sortable": true,
         "center": true
       },
@@ -453,8 +454,8 @@
       "id": "",
       "pathoFDId": ""
     },
-    "titleForPatientOrders": "All Patients Orders",
-    "descriptionForPatientOrders": "You Can Accept patient Orders from here...",
+    "titleForPatientOrders": "All Orders",
+    "descriptionForPatientOrders": "You Can review patients Orders from here...",
     "title": "All Pathology Orders",
     "description": "From here you can see and upload Results for all accepted orders",
     "addOrder": "http://localhost:8080/order/addradioOrder",

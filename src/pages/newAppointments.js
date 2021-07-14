@@ -360,14 +360,22 @@ class Appointements extends Component {
       .then(response => response.json())
       .then(data => {
         console.log('data: ', data)
-        this.setState({ data: data, loading: false })
+        // braz fix date
+        let temp = data.map(v => {
+          console.log(v)
+          let j = new Date(v.date).toLocaleDateString()
+          v.date = j
+          return v
+        })
+        this.setState({ data: temp, loading: false })
       })
       .catch(e => {
         this.setState({ loading: false })
 
         console.log('errror', e)
       })
-
+    console.log('ffffffffffffffffffffffffffffffffffff')
+    console.log(this.state.data)
     // await axios.post(`${appointements[type].getAllAppointements}`,).then(async resp => {
 
     //    this.setState({

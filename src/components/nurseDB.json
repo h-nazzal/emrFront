@@ -89,6 +89,13 @@
         "sortable": true,
         "center": true
       },
+      "cigarettes:": {
+        "name": "smoking status",
+        "selector": "cigarettes",
+        "sortable": true,
+        "center": true
+      },
+
       "actions": {
         "name": "actions",
         "selector": "actions",
@@ -127,8 +134,8 @@
         "name": "takenBy"
       }
     },
-    "title": "All Patient last Visits",
-    "description": "From here you can see and upload Results for all accepted orders",
+    "title": " Patient Vitals ",
+    "description": "From here you can monitor and add vitals",
     "getAll": "http://localhost:8080/session/getSessionByDate",
     "getPatientLastVisits": "http://localhost:8080/nurse/getByPtId",
     "deleteVital": "http://localhost:8080/nurse/deleteRecorder",

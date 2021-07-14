@@ -392,7 +392,8 @@ class NurseVisit extends Component {
             diastolic: this.state.diastolic,
             oxygenSaturation: this.state.oxygenSaturation,
             takenBy: this.state.takenBy,
-            bloodGlucoseLevel: this.state.bloodGlucoseLevel
+            bloodGlucoseLevel: this.state.bloodGlucoseLevel,
+            cigarettes: this.state.cigarettes
             // bloodPressure : this.state.systolic +"/"+ this.state.diastolic
           }
         : item

@@ -26,7 +26,7 @@ class AllOrders extends Component {
       modalUploadResultInputs: [],
       openModal: false,
       typeObj: {},
-      formType: 'uploadResult',
+      formType: 'upload',
       numPages: null,
       pageNumber: 1,
       fileResult: '',

@@ -168,7 +168,7 @@ class SignupList1 extends Component {
       .then(resp => {
         resp.text().then(text => {
           console.log('text:  ', text)
-          // this.props.history.push("/login")
+          this.props.history.push('/login')
         })
       })
       .catch(() => {
@@ -181,7 +181,12 @@ class SignupList1 extends Component {
   render () {
     return (
       <div className='container-fluid'>
-        <div className='row no-gutter'>
+        <div
+          className='row no-gutter'
+          style={{
+            marginTop: '-20px'
+          }}
+        >
           <div className='col-md-8 col-lg-6'>
             <div className='login d-flex align-items-center py-5'>
               <div className='container'>
