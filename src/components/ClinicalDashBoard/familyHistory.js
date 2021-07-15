@@ -332,6 +332,7 @@ class FamilyHistory extends Component {
     return (
       <Container>
         {console.log('modalAdditionInputs : ', this.state.ModalAddtionInputs)}
+        {console.log('the button flag:', this.props.addButtonFlag)}
         <Row className='py-3'>
           <Col>
             {clinicalDB && this.state.type && (

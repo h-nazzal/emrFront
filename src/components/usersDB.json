@@ -1301,9 +1301,126 @@
     },
     "title": "All Pharmacists",
     "description": "You can see All Pharmacists here...",
+
     "addUser": "http://localhost:8080/pharmacist/addPharmacist",
     "deleteUser": "http://localhost:8080/pharmacist/deletePharmacist",
     "updateUser": "http://localhost:8080/pharmacist/updatePharmacist",
     "getAll": "http://localhost:8080/pharmacist/getPharmacist"
+  },
+  "client": {
+    "state": {
+      "userName": "",
+
+      "Email": "",
+      "firstName": "",
+      "secondName": "",
+      "lastName": "",
+      "phone": "",
+      "ptCode": ""
+    },
+    "columnsTable": {
+      "userName": {
+        "name": "User Name",
+        "selector": "userName",
+        "sortable": true,
+        "center": true
+      },
+      "Email": {
+        "name": "Email",
+        "selector": "Email",
+        "sortable": true,
+        "center": true
+      },
+      "firstName": {
+        "name": "firstName",
+        "selector": "firstName",
+        "sortable": true,
+        "center": true
+      },
+      "Email": {
+        "name": "Email",
+        "selector": "Email",
+        "sortable": true,
+        "center": true
+      },
+      "secondName": {
+        "name": "secondName",
+        "selector": "secondName",
+        "sortable": true,
+        "center": true
+      },
+      "lastName": {
+        "name": "lastName",
+        "selector": "lastName",
+        "sortable": true,
+        "center": true
+      },
+      "phone": {
+        "name": "phone",
+        "selector": "phone",
+        "sortable": true,
+        "center": true
+      },
+      "ptCode": {
+        "name": "phone",
+        "selector": "phone",
+        "sortable": true,
+        "center": true
+      },
+      "actions": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "300px"
+      }
+    },
+    "modalUpdateForms": {
+      "userName": {
+        "name": "User Name",
+        "selector": "userName",
+        "sortable": true,
+        "center": true
+      },
+      "Email": {
+        "name": "Email",
+        "selector": "Email",
+        "sortable": true,
+        "center": true
+      },
+      "firstName": {
+        "name": "firstName",
+        "selector": "firstName",
+        "sortable": true,
+        "center": true
+      },
+      "Email": {
+        "name": "Email",
+        "selector": "Email",
+        "sortable": true,
+        "center": true
+      },
+      "secondName": {
+        "name": "secondName",
+        "selector": "secondName",
+        "sortable": true,
+        "center": true
+      },
+      "lastName": {
+        "name": "lastName",
+        "selector": "lastName",
+        "sortable": true,
+        "center": true
+      },
+      "phone": {
+        "name": "phone",
+        "selector": "phone",
+        "sortable": true,
+        "center": true
+      }
+    },
+    "title": "All Pharmacists",
+    "description": "You can see All Pharmacists here...",
+    "getAll": "http://localhost:8080/pt/findByAdmin"
   }
 }

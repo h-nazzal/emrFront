@@ -214,7 +214,7 @@
       },
       "pathoName": {
         "name": "pathology Name",
-        "selector": "name",
+        "selector": "pathoName",
         "sortable": true,
         "center": true
       },
@@ -397,7 +397,7 @@
     "columnsTableForPatientOrders": {
       "Date": {
         "name": "Date",
-        "selector": "ate",
+        "selector": "Date",
         "sortable": true,
         "center": true
       },

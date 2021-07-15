@@ -98,8 +98,8 @@ export default function Procedures ({
 
   const columns = [
     { field: 'id', headerName: 'ID', hide: true },
-    { field: 'name', headerName: 'Surgry', width: 150 },
-    { field: 'notes', headerName: 'Notes', width: 150 },
+    { field: 'name', headerName: 'Surgery', width: 300 },
+    { field: 'notes', headerName: 'Notes', width: 300 },
     {
       field: 'Edit',
       headerName: 'Edit',

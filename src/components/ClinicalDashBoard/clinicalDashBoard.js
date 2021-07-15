@@ -409,21 +409,21 @@ const ClinicalDashBoard = ({ match }) => {
                   <FamilyHistory
                     type={'onGoingProblems'}
                     id={match.params.id}
-                    addButtonFlag={false}
+                    addButtonFlag={true}
                   />
                 </TabPanel>
                 <TabPanel value={value} index={2}>
                   <FamilyHistory
                     type={'surgeries'}
                     id={match.params.id}
-                    addButtonFlag={false}
+                    addButtonFlag={true}
                   />
                 </TabPanel>
                 <TabPanel value={value} index={3}>
                   <FamilyHistory
                     type={'Interventions'}
                     id={match.params.id}
-                    addButtonFlag={false}
+                    addButtonFlag={true}
                   />
                 </TabPanel>
                 <TabPanel value={value} index={4}>

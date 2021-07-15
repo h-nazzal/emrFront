@@ -267,7 +267,7 @@ class ClinicalOrders extends Component {
             {!this.state.flagCompoenentType && this.state.type && orderType && (
               <>
                 <h3>All Patient Orders</h3>
-                <div>You can Show result here....</div>
+                <div>You can Show result here.</div>
               </>
             )}
           </Col>

@@ -60,12 +60,16 @@
     "title": "All Allergies ",
     "description": "You can see all Allergies for this patient...",
     "getAllergyProblemsForPatient": "http://localhost:8080/pt/getAllergyByIdCB",
-    "getAll": "http://localhost:8080/visit/pt_allergies",
+    "getAll": "http://localhost:8080/pt/getAllergyByIdCB",
     "getAllAllergy": "http://localhost:8080/disease/getAll",
     "adding": "http://localhost:8080/pt/addOneAllergy"
   },
 
   "onGoingProblems": {
+    "state": {
+      "problem": "",
+      "date": ""
+    },
     "columnsTable": {
       "problem": {
         "name": "Problem",
@@ -88,16 +92,18 @@
         "placeHolder": "Choose the Disease Type"
       },
       "date": {
-        "type": "text",
+        "type": "date",
         "name": "date",
-        "label": "Date"
+        "label": "Date",
+        "placeHolder": "Date"
       }
     },
     "title": "All OnGoingProblems ",
     "description": "You can see all OnGoingProblems broblems for this patient...",
     "getAllergyProblemsForPatient": "http://localhost:8080/pt/getProblemsById",
     "getAll": "http://localhost:8080/visit/onGoingProblem",
-    "getAllDiseases": "http://localhost:8080/disease/getAll"
+    "getAllDiseases": "http://localhost:8080/disease/getAll",
+    "adding": "http://localhost:8080/pt/addOneAllergy"
   },
   "familyHistory": {
     "state": {
@@ -120,7 +126,7 @@
           { "value": "remote Family", "text": "remote Family" },
           { "value": "sibling", "text": "sibling" }
         ],
-        "placeHolder": "Choose Relation"
+        "placeHolder": "Choose the Relationship"
       }
     },
     "columnsTable": {
@@ -146,7 +152,8 @@
   "surgeries": {
     "state": {
       "name": "",
-      "abbreviation": ""
+      "notes": "",
+      "date": ""
     },
     "modalAdditionForms": {
       "problem": {
@@ -155,15 +162,10 @@
         "label": "Name",
         "placeHolder": "Choose the Surgeries Type"
       },
-      "relation": {
-        "type": "select",
-        "name": "abbreviation",
-        "label": "Abbreviation",
-        "options": [
-          { "value": "parent", "text": "parent" },
-          { "value": "remote Family", "text": "remote Family" },
-          { "value": "sibling", "text": "sibling" }
-        ]
+      "date": {
+        "type": "text",
+        "name": "date",
+        "label": "Date"
       }
     },
     "columnsTable": {
@@ -173,9 +175,16 @@
         "sortable": true,
         "center": true
       },
-      "relation": {
-        "name": "Abbreviation",
-        "selector": "abbreviation",
+
+      "date": {
+        "name": "Date",
+        "selector": "date",
+        "sortable": true,
+        "center": true
+      },
+      "notes": {
+        "name": "notes",
+        "selector": "notes",
         "sortable": true,
         "center": true
       }
@@ -204,15 +213,21 @@
       }
     },
     "columnsTable": {
-      "problem": {
+      "name": {
         "name": "Name",
         "selector": "name",
         "sortable": true,
         "center": true
       },
-      "relation": {
+      "date": {
+        "name": "Date",
+        "selector": "createdAt",
+        "sortable": true,
+        "center": true
+      },
+      "note": {
         "name": "Note",
-        "selector": "note",
+        "selector": "notes",
         "sortable": true,
         "center": true
       }
