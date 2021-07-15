@@ -80,6 +80,7 @@
       "date": {
         "name": "Date",
         "selector": "date",
+
         "sortable": true,
         "center": true
       }
@@ -162,10 +163,11 @@
         "label": "Name",
         "placeHolder": "Choose the Surgeries Type"
       },
-      "date": {
+
+      "notes": {
         "type": "text",
-        "name": "date",
-        "label": "Date"
+        "name": "notes",
+        "label": "notes"
       }
     },
     "columnsTable": {
@@ -175,10 +177,10 @@
         "sortable": true,
         "center": true
       },
-
       "date": {
         "name": "Date",
         "selector": "date",
+
         "sortable": true,
         "center": true
       },
@@ -191,8 +193,9 @@
     },
     "title": "All Surgeries for this Patient",
     "description": "You will see here all Surgeries to this Patient....",
-    "getAllDiseases": "http://localhost:8080/disease/getAll",
-    "getAll": "http://localhost:8080/visit/pt_surgery_histories"
+    "getAllDiseases": "http://localhost:8080/surgery/getAll",
+    "getAll": "http://localhost:8080/visit/pt_surgery_histories",
+    "adding": "http://localhost:8080/visit/addsurgerycb"
   },
   "Interventions": {
     "state": {
@@ -200,15 +203,15 @@
       "note": ""
     },
     "modalAdditionForms": {
-      "problem": {
+      "Intervention": {
         "type": "text",
         "name": "name",
         "label": "Name",
-        "placeHolder": "Choose the Surgeries Type"
+        "placeHolder": "Intervention name"
       },
-      "relation": {
+      "inotes": {
         "type": "text",
-        "name": "note",
+        "name": "inotes",
         "label": "Note"
       }
     },
@@ -234,7 +237,7 @@
     },
     "title": "All Interventions for this Patient",
     "description": "You will see here all Interventions.",
-    "getAllDiseases": "http://localhost:8080/disease/getAll",
+    "adding": "http://localhost:8080/visit/addpt_interventions",
     "getAll": "http://localhost:8080/visit/pt_interventions"
   },
   "activeMedication": {
