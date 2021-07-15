@@ -1,5 +1,10 @@
 {
   "allergy": {
+    "state": {
+      "name": "",
+      "status": "",
+      "date": ""
+    },
     "columnsTable": {
       "date": {
         "name": "Date",
@@ -44,6 +49,7 @@
         "placeHolder": "Status",
         "label": "Status"
       },
+
       "date": {
         "type": "date",
         "name": "date",
@@ -51,11 +57,12 @@
         "placeHolder": "Date"
       }
     },
-    "title": "All Allergies",
+    "title": "All Allergies ",
     "description": "You can see all Allergies for this patient...",
-    "getAllergyProblemsForPatient": "http://localhost:8080/pt/getAllergyById",
+    "getAllergyProblemsForPatient": "http://localhost:8080/pt/getAllergyByIdCB",
     "getAll": "http://localhost:8080/visit/pt_allergies",
-    "adding": "http://localhost:8080/pt/addPtAllergy"
+    "getAllAllergy": "http://localhost:8080/disease/getAll",
+    "adding": "http://localhost:8080/pt/addOneAllergy"
   },
 
   "onGoingProblems": {
@@ -119,7 +126,7 @@
     "columnsTable": {
       "problem": {
         "name": "Problem",
-        "selector": "problem",
+        "selector": "name",
         "sortable": true,
         "center": true
       },

@@ -105,7 +105,7 @@ class FamilyHistory extends Component {
 
   async componentDidMount () {
     var type = this.props.type
-    console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!, ', this.props.id)
+    console.log('did mount family.js, ', this.props.id)
     this.setState({ type })
     // put the options Inputs in options which got from jsonFile
     if (type === 'allergy') this.getTypesFromDB()
@@ -228,8 +228,10 @@ class FamilyHistory extends Component {
     // **** Change the EndPoint with the New One
     var details = {}
     // for Addition Form Inputs
+    console.log('the thingy', clinicalDB[this.state.type].state)
     for (var p in clinicalDB[this.state.type].state) {
       details[p] = this.state[p]
+      console.log('hey', details[p])
     }
     details['ptId'] = this.props.id
     console.log('details on Adding : ', this.state)
@@ -286,7 +288,7 @@ class FamilyHistory extends Component {
         for (var place of resp.data) {
           var obj = {
             value: place.name,
-            text: place.name + ' (' + place.abbreviation + ' )'
+            text: place.name
           }
           temp2.push(obj)
         }
