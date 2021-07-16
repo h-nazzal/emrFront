@@ -113,7 +113,7 @@ function App () {
           component={UserWelcomePage}
         ></Route>{' '}
         {/* <Route exact path={`${this.props.}`} component={UserWelcomePage}></Route> */}
-        {/* <Route  path="/profile" component={Profile}></Route> */}
+        <Route path='/profile' component={Profile}></Route>
         {/* <Route exact path="**" component={Error}></Route> */}
       </Switch>
     </Router>
