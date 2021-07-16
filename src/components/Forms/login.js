@@ -109,10 +109,11 @@ class Login extends Component {
           }
           // setData on LocalStorage
           else {
-            console.log('data:  ', data)
+            console.log(' user data:  ', data)
             localStorage.setItem('role', data.role)
             localStorage.setItem('userId', data.userId)
             localStorage.setItem('userName', this.state.userName)
+            localStorage.setItem('image', this.state.userImage)
             this.props.getAuthorization(true, this.state.userName) // for App to flip the Login and logout button
           }
 

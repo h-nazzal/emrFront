@@ -1,0 +1,181 @@
+import { Grid } from '@material-ui/core'
+import Backdrop from '@material-ui/core/Backdrop'
+import Fade from '@material-ui/core/Fade'
+import IconButton from '@material-ui/core/IconButton'
+import Modal from '@material-ui/core/Modal'
+import { makeStyles } from '@material-ui/core/styles'
+import PhotoCamera from '@material-ui/icons/PhotoCamera'
+import axios from 'axios'
+import React, { useEffect } from 'react'
+import Spinner from '../shared/Spinner'
+import ChangePassword from './CPassword'
+import './profile.css'
+import Button from 'react-bootstrap/Button'
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    '& > *': {
+      margin: theme.spacing(1)
+    }
+  },
+  input: {
+    display: 'none'
+  },
+  modal: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    border: '2px solid #000',
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3)
+  }
+}))
+
+export default function Profile (props) {
+  const classes = useStyles(props)
+  const [file, setFile] = React.useState(null)
+  const [user, setUser] = React.useState(null)
+  const [img, setImg] = React.useState(null)
+  const [open, setOpen] = React.useState(false)
+  const [loading, setLoading] = React.useState(false)
+  //get the logged in user id
+  var userId = localStorage.getItem('userId')
+
+  //handle Modal Open
+  const handleOpen = () => {
+    setOpen(true)
+  }
+  //handle Modal CLose
+  const handleClose = () => {
+    setOpen(false)
+  }
+
+  //Update Photo function
+  const updatePhoto = () => {
+    let data = new FormData()
+    if (!file) {
+      return
+    }
+    data.append('image', file)
+    data.append('userId', userId)
+    setLoading(true)
+
+    // axios.post('http://localhost:8080/authenticate/update_phote',data).then(result=>{
+    axios
+      .post('http://localhost:8080/profile/photo', data)
+      .then(result => {
+        setLoading(false)
+        console.log(result.data)
+        setImg('http://localhost:8080/images/' + result.data)
+      })
+      .catch(err => {
+        setLoading(false)
+
+        console.log(err)
+      })
+  }
+  //get user on first load
+  useEffect(async () => {
+    await getUser()
+  }, [])
+
+  //function to retrieve the user data with userId
+  const getUser = () => {
+    // axios.get('http://localhost:8080/profile/user/'+userId).then(result=>{
+    setLoading(true)
+
+    axios
+      .get('http://localhost:8080/authenticate/update_phote/user/' + userId)
+      .then(result => {
+        console.log('result :   ', result)
+        setUser(result.data)
+        setLoading(false)
+
+        setImg('http://localhost:8080/images/' + result.data.image)
+        console.log(img)
+      })
+      .catch(err => {
+        setLoading(false)
+
+        console.log(err)
+      })
+  }
+
+  //update photo in case the file path changed
+  useEffect(() => {
+    updatePhoto()
+  }, [file])
+
+  //set file path after select
+  const fileChangedHandler = event => {
+    setFile(event.target.files[0])
+  }
+
+  return (
+    <div>
+      <Spinner loading={loading} />
+
+      <Grid
+        style={{ position: 'absolute', marginTop: 25 }}
+        container
+        spacing={3}
+      >
+        {/* Box Start */}
+        <div className='main-box'>
+          {/* Upoad Button Start */}
+          <input
+            accept='image/*'
+            className={classes.input}
+            id='icon-button-file'
+            type='file'
+            onChange={fileChangedHandler}
+          />
+          <label htmlFor='button-file'>
+            <Button
+              color='primary'
+              aria-label='upload picture'
+              component='span'
+            >
+              upload image
+            </Button>
+          </label>
+          {/* Upload Button End */}
+
+          {/* Cover Start */}
+
+          {/* Cover End */}
+
+          {/* Profile Image Start */}
+
+          {/* Profile Image End */}
+
+          {/* User Data Start */}
+
+          {/* User Data Content Start */}
+
+          {/* <div class="content">
+                        <h4>Thoothukudi, Tamil Nadu, India</h4> 
+                        <ul class="content">
+                        <li><span>97 connection</span></li>
+                        <li><span>contact info</span></li>
+                        </ul>
+                    </div> */}
+          {/* User Data Content Start */}
+          {/* User Data Start */}
+
+          {/* <button class="but1">Add Profile section</button>
+                <button class="but1">More...</button> */}
+          {/* <Grid item xs={6}>
+            <ChangePassword userId={userId} />
+        </Grid>
+        <Grid item xs={6}>  
+        <   Info userId={userId} />
+        </Grid> */}
+        </div>
+      </Grid>
+    </div>
+  )
+}

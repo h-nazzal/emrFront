@@ -1,9 +1,5 @@
 import React, { Component } from 'react'
 import { Navbar } from 'react-bootstrap'
-import IconButton from '@material-ui/core/IconButton'
-import PhotoCamera from '@material-ui/icons/PhotoCamera'
-import Spinner from '../shared/Spinner'
-
 import { NavDropdown } from 'react-bootstrap'
 import { Nav } from 'react-bootstrap'
 import { Button, Overlay, Popover } from 'react-bootstrap'
@@ -18,61 +14,18 @@ import SessionCode from '../sessionCode'
 import './navbar.css'
 
 const NavBar = props => {
-  const [file, setFile] = React.useState(null)
-  const [loading, setLoading] = React.useState(false)
-
   const history = useHistory()
   const [userName, setUserName] = useState(localStorage.getItem('userName'))
   const [target, setTarget] = useState(null)
   const [img, setImg] = useState(null)
   const [showProfile, setShowProfile] = useState(false)
-  const [user, setUser] = React.useState(localStorage.getItem('userId'))
-
   const ref = useRef(null)
   // const [userName , setUserName] = useState("");
   var name = 'AlaaMensh'
-  var userID = localStorage.getItem('userId')
   const handleClick = event => {
     setShowProfile(!showProfile)
     setTarget(event.target)
   }
-  // here the code for the photo
-  //
-  //
-  const updatePhoto = () => {
-    let data = new FormData()
-    if (!file) {
-      return
-    }
-    data.append('image', file)
-    data.append('userId', localStorage.getItem('userId'))
-    setLoading(true)
-
-    // axios.post('http://localhost:8080/authenticate/update_phote',data).then(result=>{
-    axios
-      .post('http://localhost:8080/profile/photo', data)
-      .then(result => {
-        setLoading(false)
-        console.log(result.data)
-        setImg('http://localhost:8080/images/' + result.data)
-      })
-      .catch(err => {
-        setLoading(false)
-
-        console.log(err)
-      })
-  }
-
-  //update photo in case the file path changed
-  useEffect(() => {
-    updatePhoto()
-  }, [file])
-
-  //set file path after select
-  const fileChangedHandler = event => {
-    setFile(event.target.files[0])
-  }
-
   const handleUserDropDownMenu = role => {
     // eslint-disable-next-line default-case
     switch (parseInt(role)) {
@@ -432,22 +385,6 @@ const NavBar = props => {
               <Popover id='popover-contained' className='shadow'>
                 <Popover.Content>
                   <div class='col m-0 p-0 uprofile'>
-                    <input
-                      accept='image/*'
-                      id='icon-button-file'
-                      type='file'
-                      onChange={fileChangedHandler}
-                    />
-                    <label htmlFor='icon-button-file'>
-                      {/*<IconButton
-                        color='primary'
-                        aria-label='upload picture'
-                        component='span'
-                      >
-                        <PhotoCamera />
-                      </IconButton>*/}
-                      upload your avetar
-                    </label>
                     <div class='media p-2'>
                       <img
                         src='https://imgur.com/yVjnDV8.png'
