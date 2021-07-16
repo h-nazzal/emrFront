@@ -24,11 +24,19 @@
         "sortable": true,
         "center": true
       },
+
       "type": {
         "name": "Type",
         "selector": "type",
         "sortable": true,
         "center": true
+      },
+      "actionsR": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "200px"
       }
     },
     "modalAdditionForms": {
@@ -43,10 +51,10 @@
         "type": "select",
         "name": "status",
         "options": [
-          { "value": "Resolved", "text": "Active" },
-          { "value": "Active", "text": "Resolved" }
+          { "value": "Active", "text": "Active" },
+          { "value": "Resolved", "text": "Resolved" }
         ],
-        "placeHolder": "Status",
+
         "label": "Status"
       },
 
@@ -62,7 +70,9 @@
     "getAllergyProblemsForPatient": "http://localhost:8080/pt/getAllergyByIdCB",
     "getAll": "http://localhost:8080/pt/getAllergyByIdCB",
     "getAllAllergy": "http://localhost:8080/disease/getAll",
-    "adding": "http://localhost:8080/pt/addOneAllergy"
+    "adding": "http://localhost:8080/pt/addOneAllergy",
+    "delete": "http://localhost:8080/pt/deleteOnePtAllergy",
+    "resolve": "http://localhost:8080/pt/resolveOnePtAllergy"
   },
 
   "onGoingProblems": {
@@ -83,10 +93,23 @@
 
         "sortable": true,
         "center": true
+      },
+      "status": {
+        "name": "Status",
+        "selector": "status",
+        "sortable": true,
+        "center": true
+      },
+      "actionsR": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "200px"
       }
     },
     "modalAdditionForms": {
-      "problem": {
+      "name": {
         "type": "autoComplete",
         "name": "problem",
         "label": "Problem",
@@ -102,10 +125,13 @@
     "title": "All OnGoingProblems ",
     "description": "You can see all OnGoingProblems broblems for this patient...",
     "getAllergyProblemsForPatient": "http://localhost:8080/pt/getProblemsById",
-    "getAll": "http://localhost:8080/visit/onGoingProblem",
+    "getAll": "http://localhost:8080/visit/getProblemsCD",
     "getAllDiseases": "http://localhost:8080/disease/getAll",
-    "adding": "http://localhost:8080/pt/addOneAllergy"
+    "adding": "http://localhost:8080/visit/addproblemCB",
+    "delete": "http://localhost:8080/pt/deleteOnePtProblem",
+    "resolve": "http://localhost:8080/pt/resolveOnePtProblem"
   },
+
   "familyHistory": {
     "state": {
       "problem": "",
@@ -142,19 +168,26 @@
         "selector": "relation",
         "sortable": true,
         "center": true
+      },
+      "actionsD": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "200px"
       }
     },
     "title": "Family History",
     "description": "You will see here all Family History to this Patient....",
     "getAllDiseases": "http://localhost:8080/disease/getAll",
     "getAll": "http://localhost:8080/visit/pt_familyHistories",
-    "adding": "http://localhost:8080/visit/addfamilyHistories"
+    "adding": "http://localhost:8080/visit/addfamilyHistories",
+    "delete": "http://localhost:8080/pt/deleteOnept_familyHistories"
   },
   "surgeries": {
     "state": {
       "name": "",
-      "notes": "",
-      "date": ""
+      "notes": ""
     },
     "modalAdditionForms": {
       "problem": {
@@ -179,8 +212,7 @@
       },
       "date": {
         "name": "Date",
-        "selector": "date",
-
+        "selector": "createdAt",
         "sortable": true,
         "center": true
       },
@@ -189,18 +221,26 @@
         "selector": "notes",
         "sortable": true,
         "center": true
+      },
+      "actionsD": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "200px"
       }
     },
     "title": "All Surgeries for this Patient",
     "description": "You will see here all Surgeries to this Patient....",
     "getAllDiseases": "http://localhost:8080/surgery/getAll",
     "getAll": "http://localhost:8080/visit/pt_surgery_histories",
-    "adding": "http://localhost:8080/visit/addsurgerycb"
+    "adding": "http://localhost:8080/visit/addsurgerycb",
+    "delete": "http://localhost:8080/pt/deleteOnept_surgery_histories"
   },
   "Interventions": {
     "state": {
       "name": "",
-      "note": ""
+      "notes": ""
     },
     "modalAdditionForms": {
       "Intervention": {
@@ -209,9 +249,9 @@
         "label": "Name",
         "placeHolder": "Intervention name"
       },
-      "inotes": {
+      "notes": {
         "type": "text",
-        "name": "inotes",
+        "name": "notes",
         "label": "Note"
       }
     },
@@ -233,12 +273,21 @@
         "selector": "notes",
         "sortable": true,
         "center": true
+      },
+      "actionsD": {
+        "name": "actions",
+        "selector": "actions",
+        "sortable": false,
+        "center": true,
+        "width": "200px"
       }
     },
     "title": "All Interventions for this Patient",
     "description": "You will see here all Interventions.",
     "adding": "http://localhost:8080/visit/addpt_interventions",
-    "getAll": "http://localhost:8080/visit/pt_interventions"
+
+    "getAll": "http://localhost:8080/visit/pt_interventions",
+    "delete": "http://localhost:8080/pt/deleteOnept_interventions"
   },
   "activeMedication": {
     "state": {

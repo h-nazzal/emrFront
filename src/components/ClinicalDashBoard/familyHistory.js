@@ -37,36 +37,80 @@ class FamilyHistory extends Component {
     var temp2 = []
     for (var p in clinicalDB[type].columnsTable) {
       // for Adding actions Buttons to DataTable
-      if (p === 'actions') {
+      if (p === 'actionsR') {
         clinicalDB[type].columnsTable[p]['cell'] = row => {
-          // return (
-          // <div className="row">
-          //   <div className="col-auto">
-          //     <button
-          //       className="btn btn-primary"
-          //       onClick={async () => {
-          //         // console.log("rooooow : " , row)
-          //         // console.log("id:  " , row)
-          //         await this.setUpdatedObj(row.id);
-          //         this.setState({ formType: "edit" });
-          //         this.handleopenModal();
-          //       }}
-          //     >
-          //       Update
-          //     </button>
-          //   </div>
-          //   <div className="col-auto">
-          //     <button
-          //       className="btn btn-danger"
-          //       onClick={() => {
-          //         this.handleDelete(row.id);
-          //       }}
-          //     >
-          //       Delete
-          //     </button>
-          //   </div>
-          // </div>
-          // );
+          return (
+            <div className='row'>
+              <div className='col-auto'>
+                <button
+                  size='sm'
+                  className='btn btn-success'
+                  onClick={() => {
+                    this.handleResolve(row.id)
+                  }}
+                >
+                  Resolve
+                </button>
+              </div>
+
+              <div className='col-auto'>
+                <button
+                  size='sm'
+                  className='btn btn-danger'
+                  onClick={() => {
+                    this.handleDelete(row.id)
+                  }}
+                >
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='16'
+                    height='16'
+                    fill='currentColor'
+                    class='bi bi-trash'
+                    viewBox='0 0 16 16'
+                  >
+                    <path d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z' />
+                    <path
+                      fill-rule='evenodd'
+                      d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z'
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          )
+        }
+        temp.push(clinicalDB[type].columnsTable[p])
+      } else if (p === 'actionsD') {
+        clinicalDB[type].columnsTable[p]['cell'] = row => {
+          return (
+            <div className='row'>
+              <div className='col-auto'>
+                <button
+                  size='sm'
+                  className='btn btn-danger'
+                  onClick={() => {
+                    this.handleDelete(row.id)
+                  }}
+                >
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='16'
+                    height='16'
+                    fill='currentColor'
+                    class='bi bi-trash'
+                    viewBox='0 0 16 16'
+                  >
+                    <path d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z' />
+                    <path
+                      fill-rule='evenodd'
+                      d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z'
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          )
         }
         temp.push(clinicalDB[type].columnsTable[p])
       } else {
@@ -191,7 +235,7 @@ class FamilyHistory extends Component {
       formBody.push(encodedKey + '=' + encodedValue)
     }
 
-    fetch(`${clinicalDB[this.state.type].deleteUser}`, {
+    fetch(`${clinicalDB[this.state.type].delete}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
@@ -208,6 +252,35 @@ class FamilyHistory extends Component {
     this.setState({
       data: this.state.data.filter(row => row.id !== id)
     })
+  }
+  handleResolve = async id => {
+    var details = {
+      id: id
+    }
+    var formBody = []
+    for (var property in details) {
+      var encodedKey = encodeURIComponent(property)
+      var encodedValue = encodeURIComponent(details[property])
+      formBody.push(encodedKey + '=' + encodedValue)
+    }
+
+    fetch(`${clinicalDB[this.state.type].resolve}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+      },
+      body: formBody
+    })
+      .then(() => {
+        console.log('it is deleted')
+      })
+      .catch(() => {
+        console.log('errror')
+      })
+
+    // this.setState({
+    //   data: this.state.data.filter(row => row.id !== id)
+    // })
   }
   // load data into Select input from DB
   loadSelectInputData = async type => {
