@@ -264,7 +264,7 @@
       },
       "date": {
         "name": "Date",
-        "selector": "createdAt",
+        "selector": "date",
         "sortable": true,
         "center": true
       },
@@ -312,5 +312,58 @@
     "title": "All Active Medication for this Patient",
     "description": "You will see here all Active Medications to this Patient.",
     "getAllDiseases": "http://localhost:8080/disease/getAll"
+  },
+  "Vitals": {
+    "state": {
+      "pulse": ""
+    },
+    "columnsTable": {
+      "time": {
+        "name": "Time",
+        "selector": "time",
+        "sortable": true
+      },
+      "temperature": {
+        "name": "Temperature",
+        "selector": "temperature",
+        "sortable": true,
+        "center": true
+      },
+
+      "pulse": {
+        "name": "Pulse",
+        "selector": "pulse",
+        "sortable": true,
+        "center": true
+      },
+      "systolic": {
+        "name": "Blood Pressure",
+        "selector": "systolic",
+        "sortable": true,
+        "center": true,
+        "width": "200px"
+      },
+
+      "oxygenSaturation": {
+        "name": "OxygenSaturation",
+        "selector": "oxygenSaturation",
+        "sortable": true
+      },
+      "bloodGlucose": {
+        "name": "Blood Glucose Level",
+        "selector": "bloodGlucoseLevel",
+        "sortable": true,
+        "center": true
+      },
+      "cigarettes:": {
+        "name": "smoking status",
+        "selector": "cigarettes",
+        "sortable": true,
+        "center": true
+      },
+      "title": " Patient Vitals ",
+      "description": "From here you can monitor vitals",
+      "getAll": "http://localhost:8080/nurse/getByPtId"
+    }
   }
 }

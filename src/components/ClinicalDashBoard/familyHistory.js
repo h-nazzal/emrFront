@@ -158,6 +158,7 @@ class FamilyHistory extends Component {
       type === 'familyHistory' ||
       type === 'surgeries' ||
       type === 'onGoingProblems' ||
+      // type === 'Vitals' ||
       type === 'activeMedication'
     ) {
       var optionsList = await this.loadSelectInputData(type)

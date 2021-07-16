@@ -24,7 +24,7 @@ import ClinicalOrders from './orders'
 import PatientAppointement from './patientAppointements'
 import UserInfo from './userInfo'
 import VisitScreen from './Visits'
-
+import VitalsScreen from './Vitals'
 function TabPanel (props) {
   const { children, value, index, ...other } = props
 
@@ -210,6 +210,24 @@ const ClinicalDashBoard = ({ match }) => {
                       to={match.url + `/${'visits'}`}
                     >
                       Visits
+                    </Link>
+                  </ListGroup.Item>
+                  <ListGroup.Item
+                    style={
+                      arr[arr.length - 1] == 'Vitals'
+                        ? styles.active
+                        : styles.inactive
+                    }
+                  >
+                    <Link
+                      style={
+                        arr[arr.length - 1] == 'Vitals'
+                          ? styles.active_link
+                          : styles.inactive_link
+                      }
+                      to={match.url + `/${'Vitals'}`}
+                    >
+                      Vitals
                     </Link>
                   </ListGroup.Item>
                   <ListGroup.Item
@@ -447,6 +465,13 @@ const ClinicalDashBoard = ({ match }) => {
                   addButtonFlag={true}
                 />
               </Route>
+              <Route exact key={55} path={match.path + '/ptdata/:type'}>
+                <FamilyHistory
+                  type={'Vitals'}
+                  id={match.params.id}
+                  addButtonFlag={false}
+                />
+              </Route>
               <Route
                 exact
                 key={5}
@@ -461,7 +486,6 @@ const ClinicalDashBoard = ({ match }) => {
                 component={PatientAppointement}
               />
               {/* <Route exact path={match.path+"/patientAppointement/visit"}  component={Visit}/>  */}
-
               <Route
                 exact
                 key={1}
@@ -469,7 +493,6 @@ const ClinicalDashBoard = ({ match }) => {
                 component={AllOrders}
               />
               {/* <Route exact  path={match.path+"/allLabOrders/:type/:id/allOrders"}  component={AllOrders}/>  */}
-
               <Route
                 exact
                 key={11}
@@ -488,7 +511,6 @@ const ClinicalDashBoard = ({ match }) => {
                 path={match.path + '/allRadioOrders/:type'}
                 component={AllOrders}
               />
-
               <Route
                 exact
                 path={match.path + '/allLabOrders/:type/addOrder'}
@@ -517,6 +539,12 @@ const ClinicalDashBoard = ({ match }) => {
                 key={100}
                 path={match.path + '/visits'}
                 component={VisitScreen}
+              />{' '}
+              <Route
+                exact
+                key={100}
+                path={match.path + '/Vitals'}
+                component={VitalsScreen}
               />
               <Route
                 exact
